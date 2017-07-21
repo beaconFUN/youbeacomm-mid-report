@@ -1,364 +1,312 @@
-% ƒvƒƒWƒFƒNƒgŠwK’†ŠÔ•ñ‘‘Ž®ƒeƒ“ƒvƒŒ[ƒg ver.1.0 (iso-2022-jp)
+% ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆå­¦ç¿’ä¸­é–“å ±å‘Šæ›¸æ›¸å¼ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ ver.1.0 (utf8)
 
-% —¼–Êˆóü‚·‚éê‡‚Í `openany' ‚ðíœ‚·‚é
+% ä¸¡é¢å°åˆ·ã™ã‚‹å ´åˆã¯ `openany' ã‚’å‰Šé™¤ã™ã‚‹
 \documentclass[11pt,papersize]{jsbook}
 
-% •ñ‘’ño—pƒXƒ^ƒCƒ‹ƒtƒ@ƒCƒ‹
-%\usepackage[final]{funpro}%ÅI•ñ‘
-\usepackage[middle]{funpro}%’†ŠÔ•ñ‘
+% å ±å‘Šæ›¸æå‡ºç”¨ã‚¹ã‚¿ã‚¤ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«
+%\usepackage[final]{funpro}%æœ€çµ‚å ±å‘Šæ›¸
+\usepackage[middle]{funpro}%ä¸­é–“å ±å‘Šæ›¸
 
-% ‰æ‘œƒtƒ@ƒCƒ‹ (EPS, EPDF, PNG) ‚ð“Ç‚Ýž‚Þ‚½‚ß‚É
+% ç”»åƒãƒ•ã‚¡ã‚¤ãƒ« (EPS, EPDF, PNG) ã‚’èª­ã¿è¾¼ã‚€ãŸã‚ã«
 \usepackage[dvipdfmx]{graphicx,color}
 
-% ‚±‚±‚©‚ç -->
+% ãƒ•ã‚¡ã‚¤ãƒ«åˆ†å‰²ã®ãŸã‚ã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸
+\usepackage{subfiles}
+
+% ã“ã“ã‹ã‚‰ -->
 \usepackage{calc,ifthen}
 \newcounter{hoge}
 \newcommand{\fake}[1]{\whiledo{\thehoge<70}{#1\stepcounter{hoge}}%
   \setcounter{hoge}{0}}
-% <-- ‚±‚±‚Ü‚Å íœ‚µ‚Ä‚à‚æ‚¢
+% <-- ã“ã“ã¾ã§ å‰Šé™¤ã—ã¦ã‚‚ã‚ˆã„
 
-% ”N“x‚ÌŽw’è
+% å¹´åº¦ã®æŒ‡å®š
 \thisYear{2017}
 
-% ƒvƒƒWƒFƒNƒg–¼
-\jProjectName{ƒr[ƒRƒ“IoT‚Å”ŸŠÙ‚Ì‚Ü‚¿‚ðƒnƒbƒN‚·‚é}
+% ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆå
+\jProjectName{ãƒ“ãƒ¼ã‚³ãƒ³IoTã§å‡½é¤¨ã®ã¾ã¡ã‚’ãƒãƒƒã‚¯ã™ã‚‹}
 
-% [ŠÈˆÕ”Å‚ÌƒvƒƒWƒFƒNƒg–¼]{³Ž®‚ÈƒvƒƒWƒFƒNƒg–¼}
-% ‰¢•¶‚ÌƒvƒƒWƒFƒNƒg–¼‚ª‹É’[‚É’·‚¢i2s‚ð’´‚¦‚éjê‡‚ÍA’Z‚¢‹Lq‚ð
-% ”CˆÓˆø”‚Æ‚µ‚Ä“n‚·B
+% [ç°¡æ˜“ç‰ˆã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆå]{æ­£å¼ãªãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆå}
+% æ¬§æ–‡ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆåãŒæ¥µç«¯ã«é•·ã„ï¼ˆ2è¡Œã‚’è¶…ãˆã‚‹ï¼‰å ´åˆã¯ã€çŸ­ã„è¨˜è¿°ã‚’
+% ä»»æ„å¼•æ•°ã¨ã—ã¦æ¸¡ã™ã€‚
 %\eProjectName[Making Delicious curry]{How to make delicious curry of Hakodate}
 \eProjectName{Leverage the Beacon IoT in Hakodate Real Downtown for Our Smarter Life}
 
 
-% <ƒvƒƒWƒFƒNƒg”Ô†>-<ƒOƒ‹[ƒv–¼>
+% <ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆç•ªå·>-<ã‚°ãƒ«ãƒ¼ãƒ—å>
 \ProjectNumber{8-B}
 
-% ƒOƒ‹[ƒv–¼
+% ã‚°ãƒ«ãƒ¼ãƒ—å
 \jGroupName{Youbeacomm}
 \eGroupName{Youbeacomm}
 
-% ƒvƒƒWƒFƒNƒgƒŠ[ƒ_
-\ProjectLeader{1015253}{‹´ê•Û‘é}{Hodaka~Hashiba}
+% ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãƒªãƒ¼ãƒ€
+\ProjectLeader{1015253}{æ©‹å ´ä¿é·¹}{Hodaka~Hashiba}
 
-% ƒOƒ‹[ƒvƒŠ[ƒ_
-\GroupLeader  {1015215}{“¡Œ´—S‘¿}{Yuta~Fujiwara}
+% ã‚°ãƒ«ãƒ¼ãƒ—ãƒªãƒ¼ãƒ€
+\GroupLeader  {1015215}{è—¤åŽŸç¥æ±°}{Yuta~Fujiwara}
 
-% ƒƒ“ƒo[”
+% ãƒ¡ãƒ³ãƒãƒ¼æ•°
 \SumOfMembers{5}
-% ƒOƒ‹[ƒvƒƒ“ƒo
-\GroupMember  {1}{1015074}{‰Í“c•à”ü}{Ayumi~Kawada}
-\GroupMember  {2}{1015215}{“¡Œ´—S‘¿}{Yuta~Fujiwara}
-\GroupMember  {3}{1015240}{r“cŒ[‘¾˜Y}{Keitaro~Arata}
-\GroupMember  {4}{1015250}{‚‹´‘å•ã}{Daisuke~Takahashi}
-\GroupMember  {5}{1015253}{‹´ê•Û‘é}{Hodaka~Hashiba}
+% ã‚°ãƒ«ãƒ¼ãƒ—ãƒ¡ãƒ³ãƒ
+\GroupMember  {1}{1015074}{æ²³ç”°æ­©ç¾Ž}{Ayumi~Kawada}
+\GroupMember  {2}{1015215}{è—¤åŽŸç¥æ±°}{Yuta~Fujiwara}
+\GroupMember  {3}{1015240}{è’ç”°å•“å¤ªéƒŽ}{Keitaro~Arata}
+\GroupMember  {4}{1015250}{é«˜æ©‹å¤§è¼”}{Daisuke~Takahashi}
+\GroupMember  {5}{1015253}{æ©‹å ´ä¿é·¹}{Hodaka~Hashiba}
 
 
-% Žw“±‹³ˆõ
-\jadvisor{¼Œ´Ž–í,“¡–ì—Yˆê,—é–ØŒb“ñ,‰œ–ì‘ñ}
-% •¡”l”‚¢‚éê‡‚ÍƒJƒ“ƒ}(,)‚Å‹æØ‚éBƒJƒ“ƒ}‚Ì‘OŒã‚É‹ó”’‚Í“ü‚ê‚È‚¢B
+% æŒ‡å°Žæ•™å“¡
+\jadvisor{æ¾åŽŸå…‹å¼¥,è—¤é‡Žé›„ä¸€,éˆ´æœ¨æµäºŒ,å¥¥é‡Žæ‹“}
+% è¤‡æ•°äººæ•°ã„ã‚‹å ´åˆã¯ã‚«ãƒ³ãƒž(,)ã§åŒºåˆ‡ã‚‹ã€‚ã‚«ãƒ³ãƒžã®å‰å¾Œã«ç©ºç™½ã¯å…¥ã‚Œãªã„ã€‚
 \eadvisor{Katsuya~Matsubara,Yuichi~Fujino,Keiji~Suzuki,Taku~Okuno}
 
-% ˜_•¶’ño“ú
-\jdate{2017”N7ŒŽ21“ú}
+% è«–æ–‡æå‡ºæ—¥
+\jdate{2017å¹´7æœˆ21æ—¥}
 \edate{July~21, 2017}
 
 \begin{document}
 %
-% •\Ž†
+% è¡¨ç´™
 \maketitle
 
-%‘O•t‚¯
+%å‰ä»˜ã‘
 \frontmatter
 
-% ˜a•¶ŠT—v
+% å’Œæ–‡æ¦‚è¦
 \begin{jabstract}
-   –{ƒvƒƒWƒFƒNƒg‚Å‚ÍAƒr[ƒRƒ“‚ðŽg‚Á‚ÄŠX‚Ìó‹µ‚ð‰ÂŽ‹‰»‚·‚é‚±‚Æ‚ÅA
-  ŠÏŒõ‚âŠX‚Ì‰Û‘è‚ð”­Œ@‚µA‚»‚Ìî•ñ‚©‚çV‚½‚È‰¿’l‚ð‘n‘¢‚µ‚ÄŠX‚ÉŠÒŒ³‚·‚é‚±‚Æ‚ð–Ú“I‚Æ‚·‚éB”ŸŠÙ‚ÌŠX’†‚É‘½”‚Ìƒr[ƒRƒ“‚ð”z”õ‚·‚é‚±‚Æ‚ð‘z’è‚µ‚ÄAŠX‚Å•é‚ç‚·l‚âŠÏŒõ‹q‚È‚Ç‚ð‘ÎÛ‚Æ‚µ‚½ƒT[ƒrƒX‚Ì’ñˆÄ‚ÆŽÀ‘•‚ðs‚¤BƒT[ƒrƒX‚Ì’ñˆÄ‚É‚ ‚½‚èA”ŸŠÙ‚ªŽ‚Â‰Û‘è‚É‚Â‚¢‚Ä‚Ì‰¼à‚ðŒš‚Ä‚½ã‚ÅƒtƒB[ƒ‹ƒhƒ[ƒN‚ðs‚¢AŠÏŽ@‚âƒCƒ“ƒ^ƒrƒ…[‚É‚æ‚èŽûW‚µ‚½î•ñ‚ð‚à‚Æ‚É•¡”‚ÌƒAƒCƒfƒA‚ð’ñˆÄ‚µ‚½B‚³‚ç‚ÉA’ñˆÄ‚µ‚½ƒAƒCƒfƒA‚ðƒuƒ‰ƒbƒVƒ…ƒAƒbƒv‚µ‚ÄƒRƒ“ƒeƒXƒgŒ`Ž®‚ÌƒvƒŒƒ[ƒ“ƒe[ƒVƒ‡ƒ“‚ðs‚¢A‹³ˆõ‚âŠO•”‹¦—ÍŠé‹Æ‚©‚ç‚ÌƒtƒB[ƒhƒoƒbƒN‚ðŽQl‚É‚µ‚Â‚ÂAŒð’ÊA‘Î˜bAŠÏŒõ‘ÌŒ±‚Ì3‚Â‚Ìƒe[ƒ}‚ÉŠÖ‚·‚éƒT[ƒrƒX‚ÌŠJ”­‚ðs‚¤‚±‚Æ‚Æ‚µ‚½B
-  \bunseki{‹´ê•Û‘é}
-   ƒOƒ‹[ƒvB‚ÍAƒtƒB[ƒ‹ƒhƒ[ƒN‚©‚çŠO‘lŠÏŒõ‹q‚Ö‚ÌŒ¾Œê‚Ì‘Î‰ž‚ª•K—v‚Æl‚¦AŠO‘lŠÏŒõ‹q‚ª“ú–{l‚ÆƒXƒ€[ƒY‚É‰ï˜b‚Å‚«‚é‚æ‚¤‚ÉŽè•‚¯‚ð‚·‚é‚Æ‚¢‚¤–Ú“I‚Æ‚·‚éB‚±‚Ì–â‘è‚ÍŠù‘¶‚ÌŽw‚³‚µ‰ï˜b’ ‚ª•‹y‚·‚é‚±‚Æ‚Å‰ðŒˆ‚·‚é‚Æl‚¦‚½B‚µ‚©‚µŠù‘¶‚ÌŽw‚³‚µ‰ï˜b’ ‚Å‚ÍAŽ©•ª‚ª—~‚µ‚¢ƒtƒŒ[ƒY‚ð‚·‚®Œ©‚Â‚¯‚ç‚ê‚È‚¢A—~‚µ‚¢ƒtƒŒ[ƒY‚ªŒfÚ‚³‚ê‚Ä‚¢‚È‚¢‚È‚Ç‚Ì‰Û‘è‚ª‚ ‚éB‚±‚±‚©‚çAƒOƒ‹[ƒvB ‚Å‚ÍŠù‘¶‚ÌŽw‚³‚µ‰ï˜b’ ‚ðƒXƒ}[ƒgƒtƒHƒ“ƒAƒvƒŠ‚É‚µAƒr[ƒRƒ“‚Å—˜—pŽÒ‚Ìó‹µ‚ð“Ç‚ÝŽæ‚èA‚»‚±‚©‚ç—~‚µ‚¢î•ñ‚ðŽ@’m‚µƒXƒ}[ƒgƒtƒHƒ“‚ÉƒAƒvƒŠ‚©‚ç‘—M‚·‚é‚Æ‚¢‚¤ƒT[ƒrƒX‚ð’ñˆÄ‚µ‚½B
-  ‚µ‚©‚µ‚±‚Ì’ñˆÄ‚ð7ŒŽ14 “ú‚És‚í‚ê‚½’†ŠÔ•ñ‰ï‚Å”­•\‚µ‚½‚Æ‚±‚ëA‚½‚­‚³‚ñ‚Ì‰Û‘è‚ªŒ©‚Â‚©‚Á‚½BŒãŠú‚Å‚Í‰Û‘è‚ðŒ³‚ÉƒOƒ‹[ƒv‚Å’ñˆÄ‚ð‰ü‘P‚µƒvƒƒgƒ^ƒCƒv‚Ìì¬‚ð‚·‚éB‚»‚Ìƒvƒƒgƒ^ƒCƒv‚ðŽÀÛ‚ÉŠO‘lŠÏŒõ‹q‚ÉŽg—p‚µ‚Ä‚à‚ç‚¢AƒŒƒrƒ…[‚ð‚¢‚½‚¾‚­—\’è‚Å‚ ‚éB‚»‚µ‚Ä‚±‚ê‚ðŒJ‚è•Ô‚·‚±‚Æ‚ÅŠO‘lŠÏŒõ‹q‚ÌƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“‚ðŽx‰‡‚·‚éB
-%\fake{÷‚Ð‚È‚Ì‚Å‚·}
-% ˜a•¶ƒL[ƒ[ƒh
+
+% ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆå…¨ä½“ã®æ—¥æœ¬èªžæ¦‚è¦
+\subfile{mid-report-common/common-jabstract}
+
+ ã‚°ãƒ«ãƒ¼ãƒ—Bã¯ã€ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ãƒ¯ãƒ¼ã‚¯ã‹ã‚‰å¤–å›½äººè¦³å…‰å®¢ã¸ã®è¨€èªžã®å¯¾å¿œãŒå¿…è¦ã¨è€ƒãˆã€å¤–å›½äººè¦³å…‰å®¢ãŒæ—¥æœ¬äººã¨ã‚¹ãƒ ãƒ¼ã‚ºã«ä¼šè©±ã§ãã‚‹ã‚ˆã†ã«æ‰‹åŠ©ã‘ã‚’ã™ã‚‹ã¨ã„ã†ç›®çš„ã¨ã™ã‚‹ã€‚ã“ã®å•é¡Œã¯æ—¢å­˜ã®æŒ‡ã•ã—ä¼šè©±å¸³ãŒæ™®åŠã™ã‚‹ã“ã¨ã§è§£æ±ºã™ã‚‹ã¨è€ƒãˆãŸã€‚ã—ã‹ã—æ—¢å­˜ã®æŒ‡ã•ã—ä¼šè©±å¸³ã§ã¯ã€è‡ªåˆ†ãŒæ¬²ã—ã„ãƒ•ãƒ¬ãƒ¼ã‚ºã‚’ã™ãè¦‹ã¤ã‘ã‚‰ã‚Œãªã„ã€æ¬²ã—ã„ãƒ•ãƒ¬ãƒ¼ã‚ºãŒæŽ²è¼‰ã•ã‚Œã¦ã„ãªã„ãªã©ã®èª²é¡ŒãŒã‚ã‚‹ã€‚ã“ã“ã‹ã‚‰ã€ã‚°ãƒ«ãƒ¼ãƒ—B ã§ã¯æ—¢å­˜ã®æŒ‡ã•ã—ä¼šè©±å¸³ã‚’ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ã‚¢ãƒ—ãƒªã«ã—ã€ãƒ“ãƒ¼ã‚³ãƒ³ã§åˆ©ç”¨è€…ã®çŠ¶æ³ã‚’èª­ã¿å–ã‚Šã€ãã“ã‹ã‚‰æ¬²ã—ã„æƒ…å ±ã‚’å¯ŸçŸ¥ã—ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ã«ã‚¢ãƒ—ãƒªã‹ã‚‰é€ä¿¡ã™ã‚‹ã¨ã„ã†ã‚µãƒ¼ãƒ“ã‚¹ã‚’ææ¡ˆã—ãŸã€‚
+  ã—ã‹ã—ã“ã®ææ¡ˆã‚’7æœˆ14 æ—¥ã«è¡Œã‚ã‚ŒãŸä¸­é–“å ±å‘Šä¼šã§ç™ºè¡¨ã—ãŸã¨ã“ã‚ã€ãŸãã•ã‚“ã®èª²é¡ŒãŒè¦‹ã¤ã‹ã£ãŸã€‚å¾ŒæœŸã§ã¯èª²é¡Œã‚’å…ƒã«ã‚°ãƒ«ãƒ¼ãƒ—ã§ææ¡ˆã‚’æ”¹å–„ã—ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—ã®ä½œæˆã‚’ã™ã‚‹ã€‚ãã®ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—ã‚’å®Ÿéš›ã«å¤–å›½äººè¦³å…‰å®¢ã«ä½¿ç”¨ã—ã¦ã‚‚ã‚‰ã„ã€ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚’ã„ãŸã ãäºˆå®šã§ã‚ã‚‹ã€‚ãã—ã¦ã“ã‚Œã‚’ç¹°ã‚Šè¿”ã™ã“ã¨ã§å¤–å›½äººè¦³å…‰å®¢ã®ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’æ”¯æ´ã™ã‚‹ã€‚
+
+% å’Œæ–‡ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰
 \begin{jkeyword}
-ƒr[ƒRƒ“, ”ŸŠÙ, ŠO‘lŠÏŒõ‹q, Žw‚³‚µ‰ï˜b’ 
+  ãƒ“ãƒ¼ã‚³ãƒ³, å‡½é¤¨, å¤–å›½äººè¦³å…‰å®¢, æŒ‡ã•ã—ä¼šè©±å¸³
 \end{jkeyword}
-\bunseki{“¡Œ´—S‘¿}
+\bunseki{è—¤åŽŸç¥æ±°}
+
 \end{jabstract}
 
-%‰pŒê‚ÌŠT—v
+%è‹±èªžã®æ¦‚è¦
 \begin{eabstract}
-  It was decided that beacons will be deployed to Hakodate. The beacon can log and advertise to smart device users. We will use these beacons. And we propose and develop services to make Hakodate better. We performed field work after hypothesizing Hakodatefs problems, and we proposed many ideas. We held idea contest and got some feedbacks. Based on these feedbacks, we did brush up on ideas and elected themes for development.
-\bunseki{‹´ê•Û‘é}
+
+% ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆå…¨ä½“ã®è‹±èªžæ¦‚è¦
+\subfile{mid-report-common/common-eabstract}
+
  Group B considers that language response from fieldwork to foreign tourists is necessary and aims to help foreign tourists to talk with Japanese smoothly. I thought that this problem would be solved by dissemination of existing pointing speech book. However, in the existing pointing conversation book, there is a problem that you can not find the phrase you want immediately, and the phrase you want is not posted. From here, in group B, we propose a service that makes existing pointing conversation book a smartphone application, reads the situation of the user with beacon, senses the information desired from it, and sends it from the application to the smartphone. However, when this proposal was announced at the interim report meeting held on July 14, a lot of subjects were found. In the latter term, we will improve the proposal by the group based on the task and create a prototype. I will have the prototype actually used by foreign tourists and will be reviewed. And by repeating this we support communication of foreign tourists.
-%\fake{you should write your English abstract in one page. }
-% ‰p•¶ƒL[ƒ[ƒh
+
+% è‹±æ–‡ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰
 \begin{ekeyword}
   Beacon, Hakodate, Foreign Tourists, Pointing Conversation Book
 \end{ekeyword}
-\bunseki{“¡Œ´—S‘¿}
+\bunseki{è—¤åŽŸç¥æ±°}
+
 \end{eabstract}
 
-\tableofcontents% –ÚŽŸ
+\tableofcontents% ç›®æ¬¡
 
 
-\mainmatter% –{•¶‚Ì‚Í‚¶‚Ü‚è
+\mainmatter% æœ¬æ–‡ã®ã¯ã˜ã¾ã‚Š
 
-\chapter{–{ƒvƒƒWƒFƒNƒg‚É‚Â‚¢‚Ä}
-\section{”wŒi}
- ‹ß”NAIoT‚âƒZƒ“ƒVƒ“ƒOƒfƒoƒCƒX‚Æ‚¢‚Á‚½‹Zp‚Ì•‹y‚ªi‚ñ‚Å‚¢‚éB‘–±È‚Ì’²¸‚É‚æ‚ê‚ÎA¢ŠE‚É‚¨‚¯‚éƒZƒ“ƒT[‚Ìo‰×‹àŠz‚Æo‰×‘ä”‚Í”NX‘‰Á‚µ‘±‚¯‚Ä‚¢‚éB\cite{a}
- ƒZƒ“ƒVƒ“ƒOƒfƒoƒCƒX‚Å‚ ‚éƒr[ƒRƒ“‚ÍABluetooth4.0ˆÈ~‚É‘Î‰ž‚µ‚½ƒXƒ}[ƒgƒfƒoƒCƒX‚ª‚ ‚ê‚Î’N‚Å‚àŽg—p‚âƒAƒNƒZƒXAŠˆ—p‚ª‰Â”\‚Æ‚È‚é‚½‚ßA¡ŒãAƒr[ƒRƒ“‚ðŠˆ—p‚µ‚½ˆÊ’uî•ñƒx[ƒX‚ÌƒT[ƒrƒX‚âƒVƒXƒeƒ€‚Ì‘‰Á‚ªŠú‘Ò‚Å‚«‚éB‚±‚¤‚µ‚½”wŒi‚©‚çA¡Œã‚æ‚è”­“W‚ª—\‘z‚³‚ê‚éƒr[ƒRƒ“‚ð—p‚¢‚½ƒT[ƒrƒX‚ðæ‹ì‚¯‚Äs‚¤‚±‚Æ‚É‚æ‚èAV‹K«‚Ì‚ ‚éƒT[ƒrƒX‚Ì’ñˆÄ‚âA¡Œã‚Ìƒr[ƒRƒ“‚ð—p‚¢‚½ƒvƒƒ_ƒNƒg‚Ì‘«Š|‚©‚è‚Æ‚È‚é‚±‚Æ‚ðŽŽ‚Ý‚éB
-\bunseki{‹´ê•Û‘é}
-
-\section{–Ú“I}
- –{ƒvƒƒWƒFƒNƒg‚ÍAƒr[ƒRƒ“‚ð—p‚¢‚Ä”ŸŠÙ‚ð‚æ‚è—Ç‚­‚·‚éƒT[ƒrƒX‚âƒVƒXƒeƒ€‚Ì’ñˆÄAŠJ”­‚ðs‚Á‚Ä‚¢‚éB”ŸŠÙ‚ÌŠX‚É–ñ1000ŒÂ‚Ìƒr[ƒRƒ“‚ð”z”õ‚·‚é‚Æ‘z’è‚µ‚ÄA‚»‚ê‚ðŠˆ—p‚µ‚½ƒT[ƒrƒX‚ð“WŠJ‚·‚é‚±‚Æ‚É‚æ‚Á‚ÄA”ŸŠÙ‚Å‚Ì•é‚ç‚µ‚ð•Ö—˜‚É‚µ‚½‚èAV‘ÌŒ±‚ð‘n‚èo‚µ‚Ä”ŸŠÙ‚ÌŠX‚ðŠˆ«‰»‚µ‚½‚è‚·‚é‚±‚Æ‚ª–{ƒvƒƒWƒFƒNƒg‚Ì–Ú“I‚Å‚ ‚éB–{ƒvƒƒWƒFƒNƒg‚Å‚ÌÅI–Ú•W‚ÍA’nˆæ‰Û‘è‚ð”­Œ©‚µ‚ÄƒT[ƒrƒX‚ð’ñˆÄŠJ”­‚µA‚»‚ê‚ðƒŠƒŠ[ƒX‚·‚é‚±‚Æ‚É‚æ‚Á‚Ä”ŸŠÙ‚ÉvŒ£‚·‚é‚±‚Æ‚Å‚ ‚éB
-\bunseki{‹´ê•Û‘é}
-
-\section{ƒr[ƒRƒ“‚É‚Â‚¢‚Ä}
- ƒr[ƒRƒ“‚Æ‚ÍABluetooth Low Energy‚ð—p‚¢‚Äî•ñ‚ð”­M‚·‚é‹@Ší‚Å‚ ‚éBƒr[ƒRƒ“‚Ì“d”g‚ÍABluetooth4.0ˆÈ~‚É‘Î‰ž‚µ‚½’[––‚ÅŽóM‚·‚é‚±‚Æ‚ª‰Â”\‚Å‚ ‚éBŽóM’[––‚ÍAƒr[ƒRƒ““d”g‚ð’Ê‚µ‚ÄAƒr[ƒRƒ“‚Ü‚Å‚Ì‹——£‚Æƒr[ƒRƒ“ID‚âURL“™‚Ì­—Ê‚Ì•t‰Áî•ñ‚ðŽæ“¾‚·‚é‚±‚Æ‚ª‚Å‚«‚éBƒƒCƒ„ƒŒƒXƒwƒbƒhƒtƒHƒ“‚È‚Ç‚Ì]—ˆ‚ÌBluetoothƒfƒoƒCƒX‚Æ‚ÍˆÙ‚È‚èAƒr[ƒRƒ“‚Å‚ÍAƒyƒAƒŠƒ“ƒO‚È‚µ‚Éƒf[ƒ^‚ð‘—ŽóM‚·‚é‚±‚Æ‚âAŽóM‚ðŒ_‹@‚Æ‚µ‚½ƒ†[ƒU[’Ê’m‚Ì‹N“®‚ª‰Â”\‚Å‚ ‚éB
-Œ»Ý•‹y‚µ‚Ä‚¢‚éƒr[ƒRƒ“‚É‚Í‚¢‚­‚Â‚©‚Ì‹KŠi‚ª‚ ‚èA‘ã•\“I‚È‹KŠi‚Æ‚µ‚ÄAiBeaconAEddystone‚ÆLINE Beacon‚ª‚ ‚éBiBeacon‚ÍAppleŽÐ‚ªŠJ”­‚µ‚Ä‚¢‚é‹KŠi‚Å‚ ‚èA’[––ŒÅ—L‚ÌUUID‚É‰Á‚¦‚ÄA”CˆÓ‚ÉŽw’è‚Å‚«‚éƒƒWƒƒ[’l‚Æƒ}ƒCƒi[’lAƒr[ƒRƒ“‚Æ’[––ŠÔ‚Ì‹——£‚ð}‚é‚½‚ß‚Ì“d”g‹­“x‚ðƒf[ƒ^‚Æ‚µ‚Ä”­M‚·‚é‚±‚Æ‚ª‚Å‚«‚éBEddystone‚ÍGoogleŽÐ‚ªŠJ”­‚ðs‚Á‚Ä‚¢‚é‹KŠi‚Å‚ ‚èAiBeacon‚ªŽ‚Â‹@”\‚É‰Á‚¦‚ÄAURL“™‚Ìî•ñ‚ð•t‰Á‚·‚é‚±‚Æ‚ª‚Å‚«‚éBLINE Beacon‚ÍALINEŽÐ‚ªŠJ”­‚ðs‚Á‚Ä‚¢‚é‹KŠi‚Å‚ ‚èAƒXƒ}[ƒgƒtƒHƒ“ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Å‚ ‚éuLINEv‚ÖL‚ð‘—M‚µ‚½‚èAƒvƒbƒVƒ…’Ê’m‚ð‘—M‚µ‚½‚è‚·‚é‚±‚Æ‚ª‰Â”\‚Å‚ ‚éB
-\bunseki{‹´ê•Û‘é}
-
-\chapter{ƒvƒƒZƒX}
-\section{ƒƒS‚Ìì¬}
- –{ƒvƒƒWƒFƒNƒg‚Å‚ÍAƒvƒƒWƒFƒNƒg‚Ì–Ú“I‚Æ‘ÎÛ‚Ì—‰ð‚ð‚·‚é‚±‚Æ‚Æƒ`[ƒ€ƒrƒ‹ƒfƒBƒ“ƒO‚ð–Ú“I‚Æ‚µ‚ÄƒƒS‚Ìì¬‚ðs‚Á‚½BƒƒS‚Ìì¬‚É‚Â‚¢‚Ä‚ÍA2TŠÔ‚ÌŽžŠÔ‚ð—v‚µ‚½B‚Í‚¶‚ß‚ÉA–{ƒvƒƒWƒFƒNƒg‚ð’[“I‚Éà–¾‚·‚é‚É‚ ‚½‚Á‚ÄA‚Ç‚Ì‚æ‚¤‚Èî•ñ‚ð“`‚¦‚é•K—v‚ª‚ ‚é‚Ì‚©‚ðƒuƒŒ[ƒ“ƒXƒg[ƒ~ƒ“ƒO‚ð—p‚¢‚ÄƒAƒEƒgƒvƒbƒg‚µ‚½BƒAƒEƒgƒvƒbƒg‚µ‚½ƒf[ƒ^‚ðŒ³‚ÉAŠeŽ©‚ÅƒƒS‚ÌƒfƒUƒCƒ“Œó•â‚ðì¬‚µA‘S‘Ì‚ÅƒŒƒrƒ…[‚ðs‚Á‚½BƒŒƒrƒ…[‚Å‚ÌƒRƒƒ“ƒg‚â‘¼‚Ìƒƒ“ƒo[‚ÌƒfƒUƒCƒ“Œó•â‚ðŽQl‚ÉAŠeŽ©‚Å‚à‚¤1‚ÂƒfƒUƒCƒ“‚ðì¬‚µ‚½B
-‡Œv–ñ30ŒÂ‚ÌƒfƒUƒCƒ“Œó•â‚Ì’†‚©‚çAƒvƒŒƒ[ƒ“ƒe[ƒVƒ‡ƒ“‚Æ‘½”Œˆ‚É‚æ‚èA–{ƒvƒƒWƒFƒNƒg‚ÌƒfƒUƒCƒ“‚ÌŒ´ˆÄ‚ðŒˆ’è‚µ‚½B‚»‚ÌŒãAƒƒS‚ÉŠÖ‚·‚éƒ[ƒLƒ“ƒOƒOƒ‹[ƒv‚ðŒ‹¬‚µAƒfƒUƒCƒ“‚ÌŒ´ˆÄ‚ð‰ü—Ç‚µ‚È‚ª‚çƒfƒUƒCƒ“‚ÌŒˆ’è”Å‚Æ‚»‚ê‚ð—p‚¢‚½ƒ|ƒXƒ^[‚Ìƒeƒ“ƒvƒŒ[ƒg‚ðì¬‚µ‚½B
-\bunseki{‹´ê•Û‘é}
-
-\section{ƒr[ƒRƒ“‚ÉŠÖ‚·‚é’²¸}
- –{ƒvƒƒWƒFƒNƒg‚Å‚ÍAƒr[ƒRƒ“‚ð—p‚¢‚½ŠJ”­‚ðs‚¤‚½‚ßAƒr[ƒRƒ“‚ÌŽd—l‚âŽ–—á‚É‚Â‚¢‚Ä•¶Œ£‚ð—p‚¢‚Ä’²¸‚µAƒvƒŒƒ[ƒ“ƒe[ƒVƒ‡ƒ“Œ`Ž®‚Åƒƒ“ƒo[ŠÔ‚Å‚Ì‹¤—L‚ðs‚Á‚½B•¶Œ£’²¸‚É‚Í2“úŠÔ‚Ì’²¸ŠúŠÔ‚ðÝ‚¯AŠeŽ©‚Å‘Ð‚âƒCƒ“ƒ^[ƒlƒbƒg‚©‚çî•ñ‚ðŽûW‚µ‚ÄA”­•\‚ðs‚¤‚½‚ß‚ÌƒXƒ‰ƒCƒh‚ðì¬‚µ‚½B—±“x‚ðŽw’è‚µ‚Ä‚¢‚È‚©‚Á‚½‚½‚ßAƒr[ƒRƒ“‚Å‚ÌŠJ”­ŠÂ‹«Aƒr[ƒRƒ“‹KŠi‚ÌÚ×Ž‘—¿‚Æ‚¢‚Á‚½‘½Šò‚É“n‚é’mŒ©‚ª“¾‚ç‚ê‚½B
-\bunseki{‹´ê•Û‘é}
-
-\section{ƒtƒB[ƒ‹ƒhƒ[ƒN}
-\subsection{Ž–‘O’²¸}
- Ž„’B‚ÍA”ŸŠÙ‚É‘¶Ý‚·‚é’nˆæ‚Ì‰Û‘è‚â–â‘è‚ð’²¸‚·‚é‚½‚ß‚ÉƒtƒB[ƒ‹ƒhƒ[ƒN‚ðŽÀŽ{‚µ‚½B–â‘è‚ð”­Œ©‚·‚é‚½‚ß‚É‚Ç‚Ì‚æ‚¤‚È“_‚É’…–Ú‚·‚é‚×‚«‚©‚ð3‚Â‚Ìƒ`[ƒ€‚É•ª‚©‚ê‚Ä˜b‚µ‡‚¢AŽå‚ÉƒuƒŒ[ƒ“ƒXƒg[ƒ~ƒ“ƒO‚ÆKJ–@‚ð—p‚¢‚Ä’²¸€–Ú‚ð‚Ü‚Æ‚ß‚½B’²¸€–Ú‚©‚çA’nŒ³‚Ì–â‘è‚ð’²¸‚·‚éƒOƒ‹[ƒv‚ÆŠÏŒõ’n‚Æ‚µ‚Ä‚Ì–â‘è‚ð’²¸‚·‚éƒOƒ‹[ƒv‚É•ª’S‚µ‚ÄƒtƒB[ƒ‹ƒhƒ[ƒN‚ðŽÀŽ{‚·‚é‚±‚Æ‚Æ‚µ‚½B
-\bunseki{‹´ê•Û‘é}
-
-\subsection{’nŒ³‚Ì–â‘è‚ÉŠÖ‚·‚é’²¸}
- ’nŒ³‚Ì–â‘è‚ð’²¸‚·‚éƒOƒ‹[ƒv‚ÍAŽå‚ÉŒö‹¤Ž{Ý‚Ö‚ÌƒCƒ“ƒ^ƒrƒ…[‚ðs‚¢A’nˆæ‚ªŒ»ó•ø‚¦‚Ä‚¢‚é–â‘è‚Ìô‚¢o‚µ‚ðs‚Á‚½B”ŸŠÙŽsÂ”NƒZƒ“ƒ^[‚ÆƒVƒGƒXƒ^ƒnƒRƒ_ƒe‚Ö–K–â‚ðs‚¢AƒCƒ“ƒ^ƒrƒ…[Œ`Ž®‚Å’nˆæ‚ª•ø‚¦‚Ä‚¢‚é–â‘è‚É‚Â‚¢‚Ä‚Ì“¢˜_‚ðs‚Á‚½B’²¸‚ÌŒ‹‰ÊA”ŸŠÙ‚ÍŒ»ÝA“y’n‚ª•s‘«‚µ‚Ä‚¢‚Ä’“ŽÔƒXƒy[ƒX‚ª‘«‚è‚È‚¢‚Æ‚¢‚¤‚±‚Æ‚ª‚í‚©‚Á‚½B‚Ü‚½AŒö‹¤Œð’Ê‹@ŠÖ‚ðÏ‹É“I‚É—˜—p‚µ‚Ä‚à‚ç‚¤‚±‚Æ‚ª’“ŽÔƒXƒy[ƒX•s‘«‚Ì‰ðÁ‚É‚Â‚È‚ª‚éA‚Æ‚¢‚Á‚½‰ðŒˆô‚ð“¾‚é‚±‚Æ‚ª‚Å‚«‚½B
-\bunseki{‹´ê•Û‘é}
-
-\subsection{ŠÏŒõ’n‚Ì–â‘è‚ÉŠÖ‚·‚é’²¸}
- ŠÏŒõ’n‚Æ‚µ‚Ä‚Ì–â‘è‚ð’²¸‚·‚éƒOƒ‹[ƒv‚ÍAŒÜ—ÅŠs‚âƒxƒCƒGƒŠƒA‚Æ‚¢‚Á‚½ŠÏŒõ’n‚Æ‚µ‚Ä—L–¼‚ÈƒXƒ|ƒbƒg‚Ö‘«‚ð‰^‚ÑAŽÀÛ‚ÉŠÏŒõ‚ðs‚Á‚Ä‚¢‚él‚Ö‚ÌƒCƒ“ƒ^ƒrƒ…[‚ðs‚Á‚½B’²¸‚ÌŒ‹‰ÊAƒpƒ“ƒtƒŒƒbƒg“™‚ÌŠÏŒõ‹qŒü‚¯î•ñŽ‚ÌêŠ‚ª‚í‚©‚è‚É‚­‚¢‚Æ‚¢‚Á‚½–â‘è‚â”ŸŠÙ‚Ì“¹˜H‚ª“ü‚è‘g‚ñ‚Å‚¢‚ÄAŠÏŒõ‹q‚É‚Í‚í‚©‚è‚É‚­‚¢‚Æ‚¢‚Á‚½–â‘è‚ð’m‚é‚±‚Æ‚ªo—ˆ‚½B
-\bunseki{‹´ê•Û‘é}
-
-\section{‹¦—ÍŠé‹Æ‚É‚æ‚éƒŒƒNƒ`ƒƒ[}
- ƒr[ƒRƒ“‚ÉŠÖ‚·‚éŠJ”­‚âƒT[ƒrƒX‚Ì’ñ‹Ÿ‚ðŽÀÛ‚És‚Á‚Ä‚¢‚éƒgƒ‰ƒ“ƒXƒRƒXƒ‚ƒXŠ”Ž®‰ïŽÐ‚ÆTangerineŠ”Ž®‰ïŽÐ‚©‚çAƒŠƒ‚[ƒg‰ï‹cƒT[ƒrƒX‚ð—p‚¢‚Ä‰“Šu‚Åƒr[ƒRƒ“‚ÉŠÖ‚·‚éƒŒƒNƒ`ƒƒ[‚ðŽó‚¯‚½BƒŒƒNƒ`ƒƒ[“à—e‚ÍŽå‚Éƒr[ƒRƒ“‚ÌŽd—l‚â‘¼‚ÌˆÊ’uî•ñƒT[ƒrƒX‚Æ‚Ì”äŠrAæsŽ–—á‚É‚Â‚¢‚Ä‚Ìà–¾‚Å‚ ‚Á‚½BŠ—vŽžŠÔ‚Í2ŽžŠÔ’ö“x‚¾‚Á‚½B
-\bunseki{‹´ê•Û‘é}
-
-\section{ŠJ”­‚·‚éƒT[ƒrƒX‚ÌlˆÄ}
-\subsection{ƒAƒCƒfƒAƒ\ƒ“}
- Ž„’B‚ÍA’ñˆÄ‚·‚éƒT[ƒrƒX‚ÌŒˆ’è‚ÉŒü‚¯‚ÄA‘½‚­‚ÌƒAƒCƒfƒA‚ðƒAƒEƒgƒvƒbƒg‚·‚é‚½‚ß‚ÉƒAƒCƒfƒAƒ\ƒ“‚ð2‰ñŽÀŽ{‚µ‚½B‚Í‚¶‚ß‚ÉA1ƒ`[ƒ€3l‚©‚ç4l‚ÌƒOƒ‹[ƒv‚ð4‚Âì¬‚µ‚½Bƒƒ“ƒo[ŒÂl‚²‚Æ‚É8•ªŠÔ‚Åƒr[ƒRƒ“‚ð—p‚¢‚½ƒT[ƒrƒX‚Ì’ñˆÄ‚ðs‚¢A6•ªŠÔ‚Å‘¼‚ÌƒOƒ‹[ƒvƒƒ“ƒo[‚Æ‹¤—L‚ðs‚Á‚½BŽŸ‚É5•ªŠÔ‚ÅƒT[ƒrƒX‚Ì’ñˆÄ‚ðs‚¢A6•ªŠÔ‚Å‹¤—L‚ðs‚Á‚½BÅŒã‚ÉA3•ªŠÔ‚ÅƒT[ƒrƒX‚Ì’ñˆÄ‚ðs‚¢A6•ªŠÔ‚Å‹¤—L‚ðs‚Á‚½B™X‚ÉƒAƒEƒgƒvƒbƒg‚Ü‚Å‚ÌŽžŠÔ‚ð’Z‚­‚·‚é‚±‚Æ‚É‚æ‚Á‚ÄƒAƒEƒgƒvƒbƒg‚ª“ï‚µ‚¢‚±‚Æ‚Å‚Í‚È‚¢‚Æ‚¢‚¤ˆÓŽ¯•t‚¯‚Æ“¯Žž‚Éƒe[ƒ}‚ðÝ’è‚·‚éã‚ÅŽQl‚É‚Å‚«‚éƒAƒCƒfƒA‚ÌƒAƒEƒgƒvƒbƒg‚ðs‚Á‚½B2‰ñ‚ÌƒAƒCƒfƒAƒ\ƒ“‚ð’Ê‚µ‚Ä‡Œv96ŒÂ‚ÌƒAƒCƒfƒA‚ðo‚·‚±‚Æ‚ª‚Å‚«‚½B
-\bunseki{‹´ê•Û‘é}
-
-\subsection{ƒOƒ‹[ƒv‚É‚æ‚éƒuƒ‰ƒbƒVƒ…ƒAƒbƒv}
- ƒAƒCƒfƒAƒ\ƒ“‚ÅƒAƒEƒgƒvƒbƒg‚µ‚½96ŒÂ‚ÌƒAƒCƒfƒA‚ðŒ³‚ÉAŽÀÛ‚ÉƒvƒƒWƒFƒNƒg‚Ìƒe[ƒ}‚Æ‚È‚è‚¤‚é‚æ‚¤‚Éƒuƒ‰ƒbƒVƒ…ƒAƒbƒv‚ðs‚Á‚½B4l1ƒOƒ‹[ƒv‚Å3‚Â‚ÌƒOƒ‹[ƒv‚ðì‚èA—\‚ß’ñˆÄ—á‚Æ‚µ‚ÄƒvƒƒWƒFƒNƒgƒŠ[ƒ_[‚ÆƒeƒB[ƒ`ƒ“ƒOƒAƒVƒXƒ^ƒ“ƒg‚ªì¬‚µ‚½ƒvƒŒƒ[ƒ“ƒe[ƒVƒ‡ƒ“‚ðŒ©‚½ŒãAŠeƒ`[ƒ€‚²‚Æ‚É2ƒAƒCƒfƒA‚¸‚Âƒuƒ‰ƒbƒVƒ…ƒAƒbƒv‚ðs‚Á‚½Bƒuƒ‰ƒbƒVƒ…ƒAƒbƒvŠúŠÔ‚Í1TŠÔ‚Æ‚µA“r’†‚Å‹³ˆõƒŒƒrƒ…[‚âŠw¶“¯Žm‚ÌƒŒƒrƒ…[‚ðs‚¤‚±‚Æ‚Åƒuƒ‰ƒbƒVƒ…ƒAƒbƒv‚ð‘£i‚µ‚½B
-\bunseki{‹´ê•Û‘é}
-
-\subsection{ƒAƒCƒfƒAƒRƒ“ƒeƒXƒg}
- ƒAƒCƒfƒAƒRƒ“ƒeƒXƒg‚Å‚ÍAƒuƒ‰ƒbƒVƒ…ƒAƒbƒv‚µ‚½8ŒÂ‚ÌƒAƒCƒfƒA‚ÆA’ñˆÄ—á‚Æ‚µ‚Äì¬‚µ‚½ƒAƒCƒfƒA1ŒÂ‚Ì‡Œv9ŒÂ‚ ‚éƒAƒCƒfƒA‚É‚Â‚¢‚ÄA”­•\‚Æ•]‰¿‚ðs‚Á‚½B”­•\‚ÍA1ƒAƒCƒfƒA‚ ‚½‚èƒvƒŒƒ[ƒ“ƒe[ƒVƒ‡ƒ“10•ªAƒRƒƒ“ƒgŽžŠÔ‚ª5•ª‚Ì15•ª‚ð1ƒZƒbƒg‚Æ‚µ‚Ä9‰ñƒZƒbƒVƒ‡ƒ“‚ðs‚Á‚½B‚Ü‚½AƒAƒCƒfƒAƒRƒ“ƒeƒXƒg‚É‚ ‚½‚è’S“–‹³ˆõ‚ðµ‚¢‚½‘¼Aƒgƒ‰ƒ“ƒXƒRƒXƒ‚ƒXŠ”Ž®‰ïŽÐ‚ÆTangerineŠ”Ž®‰ïŽÐ‚Ì•û‚ÆƒŠƒ‚[ƒg‰ï‹cƒT[ƒrƒX‚Å’†Œp‚ð‚µ‚½’†‚Å”­•\‚ðs‚Á‚½BƒRƒƒ“ƒg‚ÌŽžŠÔ‚Å‚ÍA’S“–‹³ˆõ‚ÆŠé‹Æ‚Ì•û‚©‚ç‚»‚ê‚¼‚êˆÓŒ©‚ð‚à‚ç‚Á‚½ã‚ÅŽ¿‹^‰ž“š‚ÌŽžŠÔ‚Æ‚µ‚½B•]‰¿‚ÍƒIƒ“ƒ‰ƒCƒ“‚Ì“Š•[ƒtƒH[ƒ€‚ð—p‚¢‚Äs‚¢AuV‚µ‚¢UX/V‘ÌŒ±vAuƒIƒŠƒWƒiƒŠƒeƒBvAu”ŸŠÙ‚Æ‚Ìe˜a«vAuƒr[ƒRƒ“‚ÌŠˆ—pvAuƒT[ƒrƒX‚ÌŒp‘±«v‚Ì5€–Ú‚ð•]‰¿‚µ‚½BuV‚µ‚¢UX/V‘ÌŒ±v‚ð10’iŠKAŽc‚è‚Ì€–Ú‚ð5’iŠK‚Æ‚µ‚½B”­•\‚Å‚ÍuƒTƒvƒ‰ƒCƒYƒXƒiƒbƒvvAuMusic TravelvAuMindEchovAu‚«‚å‚¤youvAuw“üƒVƒFƒAvAuHako BvAubeacommvAu”ŸŠÙƒfƒBƒX‚èƒK[ƒfƒ“vAuContextual-Žw·‚µ‰ï˜b’ v‚Ì‡Œv9ŒÂ‚ÌƒAƒCƒfƒA‚ð”­•\‚µ‚½B
- \begin{itemize}
-\itemuƒTƒvƒ‰ƒCƒYƒXƒiƒbƒvv‚ÍAŠÏŒõ‹qŒü‚¯‚ÌŽÊ^ŽB‰eƒT[ƒrƒX‚Å‚ ‚éBƒJƒƒ‰‚ðƒr[ƒRƒ“‚Æ‚Æ‚à‚É”ŸŠÙ‚ÌŠXŠeŠ‚ÉÝ’u‚µ‚Ä‚¨‚«Aƒr[ƒRƒ“‚ÅŠÏŒõ‹q‚ª’Ê‚è‰ß‚¬‚é‚Ì‚ðŒŸ’m‚µ‚ÄŽ©“®‚ÅŽÊ^‚ðŽB‰e‚·‚éB
-\itemuMusic Travelv‚ÍAŠÏŒõ‹qŒü‚¯‚ÌƒT[ƒrƒX‚Å‚ ‚éBƒr[ƒRƒ“‚ÆƒXƒs[ƒJ[‚ðŠÏŒõ–¼Š‚ÉÝ’u‚µA‚»‚±‚É‚¢‚él‚Ì”‚â«Ž¿‚É‚æ‚Á‚Ä—lX‚È‰¹Šy‚ð’ñ‹Ÿ‚·‚éB
-\itemuMindEchov‚ÍAŠÏŒõ‹q“¯Žm‚ÌŠ´î‚ð‹¤—L‚·‚éƒT[ƒrƒX‚Å‚ ‚éBƒXƒ}[•àƒtƒHƒ“‚ÅƒWƒFƒXƒ`ƒƒ[“ü—Í‚ðs‚¤‚±‚Æ‚É‚æ‚Á‚ÄA“¯‚¶ƒr[ƒRƒ“‚ÌŽüˆÍ‚É‚¢‚él‚ÖŒü‚©‚Á‚ÄŠ´î‚ðƒAƒEƒgƒvƒbƒg‚·‚éB
-\itemu‚«‚å‚¤youv‚ÍAŠÏŒõ‹q“¯Žm‚Ì‘ÌŒ±‚ð‹¤—L‚·‚é‚½‚ß‚ÌƒT[ƒrƒX‚Å‚ ‚éB‘¼‚ÌSNSƒT[ƒrƒX‚Æƒr[ƒRƒ“‚Ìî•ñ‚ð˜A“®‚·‚é‚±‚Æ‚ÅAŽ©•ª‚Ì‘«Õ‚â‘ÌŒ±‚ð‘¼‚Ìƒ†[ƒU[‚É‹¤—L‚·‚éB
-\itemuw“üƒVƒFƒAv‚ÍA’nŒ³‚Ì”ƒ‚¢•¨‹q“¯Žm‚ðŒq‚°‚é‚±‚Æ‚Å¤•i‚ð’m‚Á‚Ä‚à‚ç‚¤‚½‚ß‚ÌƒT[ƒrƒX‚Å‚ ‚éBƒr[ƒRƒ“‚É“o˜^‚³‚ê‚½¤•i‚ðé“`‚·‚é‚±‚Æ‚ÅA‚»‚Ì¤•i‚ðw“ü‚·‚éÛ‚ÉŠ„ˆø‚ª“ü‚éBŒã‘±‚Ì”ƒ‚¢•¨‹q‚Éé“`‚ðŒ©‚¹‚é‚±‚Æ‚Å‚»‚Ì¤•i‚É‹»–¡‚ðŽ‚Á‚Ä‚à‚ç‚¤B
-\itemuHako Bv‚ÍA”ŸŠÙ‚ÌƒoƒX‚ðŠÏŒõ‹q‚â’nŒ³‚Ìl‚É‚í‚©‚è‚â‚·‚­—˜—p‚µ‚Ä‚à‚ç‚¤‚½‚ß‚ÌƒT[ƒrƒX‚Å‚ ‚éBƒoƒX‚âƒoƒX’â‚Éƒr[ƒRƒ“‚ðÝ’u‚µAŽ©•ª‚Ìs‚«‚½‚¢êŠ‚É‚æ‚Á‚Ä“KØ‚ÉƒoƒX‚âƒoƒX’â‚ÌˆÊ’u‚ð’m‚ç‚¹‚Ä‚­‚ê‚éB
-\itemubeacommv‚ÍAŠÏŒõ‹q‚Æ’nŒ³‚ÌZ–¯‚ðŒq‚°‚é‚½‚ß‚ÌƒT[ƒrƒX‚Å‚ ‚éBƒr[ƒRƒ“‚Ì“d”g‚ð—p‚¢‚Ä“X‚Ì’†‚Å‚Ì‚ÝŽQ‰Á‚ª‚Å‚«‚éƒ[ƒJƒ‹‚ÈSNS‚ðì‚é‚±‚Æ‚ÅAŠç‚ð‡‚í‚¹‚¸‚É’nŒ³‚ÌZ–¯‚ÆŠÏŒõ‹q‚ªˆÓŽv‘a’Ê‚·‚é‚±‚Æ‚ª‚Å‚«‚éB
-\itemu”ŸŠÙƒfƒBƒX‚èƒK[ƒfƒ“v‚ÍA”ŸŠÙ‚É•s–ž‚ª‚ ‚él‚ÆA”ŸŠÙ‚ð‚æ‚è—Ç‚­‚µ‚½‚¢l‚ðƒ}ƒbƒ`ƒ“ƒO‚³‚¹‚é‚½‚ß‚ÌƒT[ƒrƒXB”ŸŠÙ‚É•s–ž‚Ì‚ ‚éƒ†[ƒU[‚ªƒr[ƒRƒ“‚É–â‘è‚ð“Še‚µA‚»‚ê‚ðŒ©‚Â‚¯‚½”ŸŠÙ‚ð‚æ‚è—Ç‚­‚µ‚½‚¢l‚ª‰ðŒˆ‚·‚é‚Æ‚¢‚Á‚½‚«‚Á‚©‚¯‚Ã‚­‚è‚ðs‚¤B
-\itemuContextual-Žw·‚µ‰ï˜b’ v‚ÍAŠO‘lŠÏŒõ‹q‚ÌƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“‚ðŽx‰‡‚·‚éƒT[ƒrƒX‚Å‚ ‚éBƒr[ƒRƒ“‚Ì“d”g‚ðŒŸ’m‚µA¡‚¢‚éêŠ‚âŒo˜H‚©‚ç‚»‚Ìê‚É‚Ó‚³‚í‚µ‚¢ƒtƒŒ[ƒY‚Æ–|–ó‚ð’ñ‹Ÿ‚·‚é‚±‚Æ‚ÅA“X‚âŒð’Ê‹@ŠÖ“™‚Å‚Ì‰ï˜b‚ðŽx‰‡‚·‚éB
-\end{itemize}
-\bunseki{‹´ê•Û‘é}
-
-\subsection{’nŒ³Šé‹Æ‚É‚æ‚éƒŒƒrƒ…[}
- ƒAƒCƒfƒAƒRƒ“ƒeƒXƒg‚ðŠJÃ‚µ‚½—‚TA”ŸŠÙ‚Å‚à‚Ì‚Ã‚­‚èŠÖŒW‚Ì‹Æ–±‚ðs‚Á‚Ä‚¢‚éŠé‹Æ‚ðµ‚¢‚½”ŸŠÙŽsˆÙ‹ÆŽíŒð—¬‰ï‚ÖŽQ‰Á‚µAƒe[ƒ}‚ÌƒAƒEƒgƒvƒbƒg‚ðŽÀŽ{‚µ‚½BŽQ‰Á‚µ‚½–Ú“I‚ÍA”ŸŠÙ‚ÌZ–¯‚âIT‹ZpŽÒ‚Å‚Í‚È‚¢l‚ÌŽ‹“_‚©‚çAƒe[ƒ}‚É‘Î‚µ‚Ä‚Ì‹qŠÏ“I‚È•]‰¿‚ð“¾‚é‚½‚ß‚Å‚ ‚éBŒð—¬‰ï‚Å‚Ì”­•\‚ÍAƒAƒCƒfƒAƒRƒ“ƒeƒXƒg‚Å•]‰¿‚ªãˆÊ‚¾‚Á‚½3‚Â‚ÌƒAƒCƒfƒA‚ð—p‚¢‚½BƒAƒCƒfƒAƒRƒ“ƒeƒXƒg‚Ì’iŠK‚ÅA—±“x‚Ì×‚©‚¢ƒXƒg[ƒŠ[‚ðŒš‚Ä‚Ä‚¢‚½‚½‚ßAŠé‹Æ‚Ì•û‚©‚ç‚Í‘½‚­‚ÌƒRƒƒ“ƒg‚âˆÓŒ©“™‚ÌƒtƒB[ƒhƒoƒbƒN‚ð“¾‚é‚±‚Æ‚ª‚Å‚«‚½BŒð—¬‰ï‚Å‚ÍAƒAƒCƒfƒAƒRƒ“ƒeƒXƒg‚Å’ñˆÄ‚³‚ê‚½ƒAƒCƒfƒA‚Ì“àAuƒTƒvƒ‰ƒCƒYƒXƒiƒbƒvvAuHako BvAu”ŸŠÙƒfƒBƒX‚èƒK[ƒfƒ“v‚Ì3‚Â‚ðÐ‰î‚µ‚½B
-\bunseki{‹´ê•Û‘é}
-
-\subsection{ƒe[ƒ}Œˆ’è}
- ƒAƒCƒfƒAƒRƒ“ƒeƒXƒg‚ð’Ê‚µ‚Ä“¾‚ç‚ê‚½ƒtƒB[ƒhƒoƒbƒN‚ðŒ³‚ÉAŽÀÛ‚ÉŠJ”­‚ðs‚¤ƒe[ƒ}‚ÌŒˆ’è‚ðs‚Á‚½Bƒe[ƒ}‚Ì‘I‘ð‚Å‚ÍAƒtƒB[ƒhƒoƒbƒN‚Å“¾‚ç‚ê‚½•]‰¿‚ð‰Á–¡‚µ‚½ã‚ÅA‘½”Œˆ‚Å‡ˆÊ•t‚¯‚ð‚µAãˆÊ3‚Â‚ÌƒAƒCƒfƒA‚ðƒe[ƒ}‚Æ‚µ‚ÄŒˆ’è‚µ‚½BŠJ”­‚ðs‚¤ƒT[ƒrƒX‚Ì”‚ÍAl”‚âŠJ”­ŠúŠÔ‚ðl‚¦‚½ã‚Å3ŒÂ‚ª‘Ã“–‚Å‚ ‚é‚Æ‚¢‚¤ˆÓŒ©‚Åˆê’v‚µ‚½B¡Œã‚ÍAuHako BvAuƒTƒvƒ‰ƒCƒYƒXƒiƒbƒvvAuContextual-Žw·‚µ‰ï˜b’ v‚Ì3‚Â‚ÌƒAƒCƒfƒA‚ð‚à‚Æ‚ÉAƒT[ƒrƒX‚ÌŠJ”­‚ðs‚¤B
-\bunseki{‹´ê•Û‘é}
+% ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆå…±é€šã®é …ç›®
+\subfile{mid-report-common/common-chapters}
 
 
-\chapter{ƒT[ƒrƒX‚Ì’ñˆÄ‚É‚ ‚½‚Á‚Ä}
+% ã‚°ãƒ«ãƒ¼ãƒ—ã”ã¨ã®é …ç›®
+\chapter{ã‚µãƒ¼ãƒ“ã‚¹ã®ææ¡ˆã«ã‚ãŸã£ã¦}
 
-\section{”wŒi}
+\section{èƒŒæ™¯}
 
-\subsection{”ŸŠÙ‚É–K‚ê‚éŠO‘lŠÏŒõ‹q}
- ”ŸŠÙŽs‚ÍA–kŠC“¹‚Ì’†‚É‚ ‚éŽs‚Ìˆê‚Â‚ÅlŒû‚Í‚¨‚æ‚»26–œl‚Ì“sŽs‚Å‚ ‚éB”ŸŠÙŽs‚Í–éŒi‚â—ð
-Žj“IŒš‘¢•¨A‰·ò‚Æ‚¢‚Á‚½‘½‚­‚ÌŠÏŒõ’n‚ðŽ‚Á‚Ä‚¢‚é‚½‚ß“ú–{l‚¾‚¯‚Å‚Í‚È‚­A‘½‚­‚ÌŠO‘lŠÏŒõ
-‹q‚ª”ŸŠÙ‚ð–K‚ê‚éB•½¬28 ”N“x‚É‚¨‚¯‚éŠÏŒõ“üž‹q”‚ÍAãŠúi4ŒŽ9ŒŽj‚Í–ñ366–œ5çl
-i‘O”N“¯Šú‚É”ä‚×–ñ45–œ4çl‘‚Ì114.1 “jA‰ºŠúi10 ŒŽ3 ŒŽj‚Í–ñ194 –œ2 çli–ñ20 –œ6
-çl‘‚Ì111.9“jA‡Œv–ñ560–œ7çli–ñ66–œl‘‚Ì113.3“j‚Æ‚È‚Á‚½B‚³‚ç‚É
-ŠO‘lh”‘‹q”‚É‚Â‚¢‚Ä‚ÍA‘ä˜p‚â’†‘‚¾‚¯‚Å‚È‚­A‹ß”N‚Íƒ^ƒCAƒ}ƒŒ[ƒVƒA‚È‚Ç‚Ì“Œ“ìƒAƒWƒA‚©
-‚ç‚Ìh”‘‹q‚ª‘‰Á‚µA‘S‘Ì‚Å‚à–ñ40–œ5çl(–ñ7 çl‘A‘O”N”ä101.9“) ‚Æ‰ß‹ŽÅ‚‚ð
-XV‚µ‚½B\cite{b}
-ˆÈã‚Ì‚±‚Æ‚©‚çAŒ»Ý”ŸŠÙ‚É‚Í‘½‚­‚ÌŠO‘lŠÏŒõ‹q‚ª–K‚ê‚Ä‚¢‚é‚±‚Æ‚ª‚í‚©‚éB‚µ‚©‚µAŠO‘l‚ª”ŸŠÙ‚ðŠÏŒõ‚·‚éã‚Å‚³‚Ü‚´‚Ü‚È–â‘è‚ð•ø‚¦‚Ä‚¢‚éB
-\bunseki{“¡Œ´—S‘¿}
+\subsection{å‡½é¤¨ã«è¨ªã‚Œã‚‹å¤–å›½äººè¦³å…‰å®¢}
+ å‡½é¤¨å¸‚ã¯ã€åŒ—æµ·é“ã®ä¸­ã«ã‚ã‚‹å¸‚ã®ä¸€ã¤ã§äººå£ã¯ãŠã‚ˆã26ä¸‡äººã®éƒ½å¸‚ã§ã‚ã‚‹ã€‚å‡½é¤¨å¸‚ã¯å¤œæ™¯ã‚„æ­´
+å²çš„å»ºé€ ç‰©ã€æ¸©æ³‰ã¨ã„ã£ãŸå¤šãã®è¦³å…‰åœ°ã‚’æŒã£ã¦ã„ã‚‹ãŸã‚æ—¥æœ¬äººã ã‘ã§ã¯ãªãã€å¤šãã®å¤–å›½äººè¦³å…‰
+å®¢ãŒå‡½é¤¨ã‚’è¨ªã‚Œã‚‹ã€‚å¹³æˆ28 å¹´åº¦ã«ãŠã‘ã‚‹è¦³å…‰å…¥è¾¼å®¢æ•°ã¯ã€ä¸ŠæœŸï¼ˆ4æœˆ9æœˆï¼‰ã¯ç´„366ä¸‡5åƒäºº
+ï¼ˆå‰å¹´åŒæœŸã«æ¯”ã¹ç´„45ä¸‡4åƒäººå¢—ã®114.1 ï¼…ï¼‰ã€ä¸‹æœŸï¼ˆ10 æœˆ3 æœˆï¼‰ã¯ç´„194 ä¸‡2 åƒäººï¼ˆç´„20 ä¸‡6
+åƒäººå¢—ã®111.9ï¼…ï¼‰ã€åˆè¨ˆç´„560ä¸‡7åƒäººï¼ˆç´„66ä¸‡äººå¢—ã®113.3ï¼…ï¼‰ã¨ãªã£ãŸã€‚ã•ã‚‰ã«
+å¤–å›½äººå®¿æ³Šå®¢æ•°ã«ã¤ã„ã¦ã¯ã€å°æ¹¾ã‚„ä¸­å›½ã ã‘ã§ãªãã€è¿‘å¹´ã¯ã‚¿ã‚¤ã€ãƒžãƒ¬ãƒ¼ã‚·ã‚¢ãªã©ã®æ±å—ã‚¢ã‚¸ã‚¢ã‹
+ã‚‰ã®å®¿æ³Šå®¢ãŒå¢—åŠ ã—ã€å…¨ä½“ã§ã‚‚ç´„40ä¸‡5åƒäºº(ç´„7 åƒäººå¢—ã€å‰å¹´æ¯”101.9ï¼…) ã¨éŽåŽ»æœ€é«˜ã‚’
+æ›´æ–°ã—ãŸã€‚\cite{b}
+ä»¥ä¸Šã®ã“ã¨ã‹ã‚‰ã€ç¾åœ¨å‡½é¤¨ã«ã¯å¤šãã®å¤–å›½äººè¦³å…‰å®¢ãŒè¨ªã‚Œã¦ã„ã‚‹ã“ã¨ãŒã‚ã‹ã‚‹ã€‚ã—ã‹ã—ã€å¤–å›½äººãŒå‡½é¤¨ã‚’è¦³å…‰ã™ã‚‹ä¸Šã§ã•ã¾ã–ã¾ãªå•é¡Œã‚’æŠ±ãˆã¦ã„ã‚‹ã€‚
+\bunseki{è—¤åŽŸç¥æ±°}
 
-\subsection{”ŸŠÙ‚Ì’nŒ³–¯‚ÆŠO‘lŠÏŒõ‹q‚ÌˆÓŽv‘a’Ê‚Ì–â‘è}\label{sec:mokuteki}
- –ˆ”N‘½‚­‚ÌŠO‘lŠÏŒõ‹q‚ª–K‚ê‚é’†‚Å‚Ì–â‘è“_‚ÍA’nŒ³–¯‚ª‚Ç‚¤‘¼Œ¾Œê‚É‘Î‰ž‚·‚é‚©‚Æ‚¢‚¤–â‘è‚Å‚ ‚éB•ê‘Œê‚Å˜b‚ð‚µ‚Ä‚­‚éŠO‘lŠÏŒõ‹q‚ªA‰½‚ð“`‚¦‚½‚¢‚Ì‚©—‰ð‚·‚é‚Ì‚ª“ï‚µ‚­A“¯‚¶Œ¾Œê‚Å‰ï˜b‚·‚éƒŒƒxƒ‹‚Å‚ÌˆÓŽv‘a’Ê‚ð}‚é‚±‚Æ‚Í”ñí‚É¢“ï‚Å‚ ‚éB‚±‚±‚Åî•ñƒZƒ“ƒ^[o”Å‹Ç‚Åo”Å‚³‚ê‚Ä‚¢‚éu—·‚ÌŽw‚³‚µ‰ï˜b’ viˆÈ‰ºAŽw‚³‚µ‰ï˜b’ j‚Æ‚¢‚¤‚à‚Ì‚ª‚ ‚éBŽw·‚µ‰ï˜b’ ‚Æ‚ÍA—·s’†‚Å•p”É‚ÉŽg‚í‚ê‚éƒtƒŒ[ƒY‚ªA“ú–{Œê‚ÆŠO‘Œê‚É–ó‚³‚ê‚Ä‚¨‚èAŽw‚ð‚³‚·‚¾‚¯‚ÅƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“‚ª‚Æ‚ê‚é‚Æ‚¢‚¤‰ï˜bW‚Ì‚±‚Æ‚Å‚ ‚éB
-‚±‚Ì–{‚ÍŒ»Ý70ˆÈã‚ÌŒ¾Œê‚É‘Î‰ž‚Å‚«‚é‚æ‚¤‚ÉƒVƒŠ[ƒY‰»‚³‚ê‚Ä‚¢‚éB‚µ‚©‚µŠù‘¶‚ÌuŽw‚³‚µ‰ï˜b’ v‚É‚Íˆµ‚¢‚É‚­‚¢“_‚ª2 ‚Â‚ ‚éB
-1 ‚Â–Ú‚ÍAŒfÚ‚³‚ê‚Ä‚¢‚éƒtƒŒ[ƒY‘½‚¢‚Æ‚¢‚¤‚±‚Æ‚Å‚ ‚éB‚»‚Ì‚½‚ß‚ÉAŽ©•ª‚Ì“`‚¦‚½‚¢ƒtƒŒ[ƒY‚ª‚Ç‚±‚ÉŒfÚ‚³‚ê‚Ä‚¢‚é‚Ì‚©‚í‚©‚ç‚¸A–{‚Ìˆµ‚¢‚ÉŠµ‚ê‚é‚Ü‚Å‚ÍŒ©‚Â‚¯‚É‚­‚¢‚Æ‚¢‚¤“_‚Å‚ ‚éB
-2 ‚Â–Ú‚ÍAŒfÚ‚³‚ê‚Ä‚¢‚éƒtƒŒ[ƒY‚µ‚©Žg‚¦‚È‚¢“_‚Å‚ ‚éB‚Â‚Ü‚è–{‚Ì‚È‚©‚É—˜—pŽÒ‚Ì‚Ù‚µ‚¢ƒtƒŒ[ƒY‚ª‚È‚¢ê‡A“IŠm‚ÈƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“‚ð‚Æ‚é‚±‚Æ‚ª‚·‚é‚±‚Æ‚ª‚Å‚«‚È‚Ì‚Å‚ ‚éB
-\bunseki{“¡Œ´—S‘¿}
+\subsection{å‡½é¤¨ã®åœ°å…ƒæ°‘ã¨å¤–å›½äººè¦³å…‰å®¢ã®æ„æ€ç–Žé€šã®å•é¡Œ}\label{sec:mokuteki}
+ æ¯Žå¹´å¤šãã®å¤–å›½äººè¦³å…‰å®¢ãŒè¨ªã‚Œã‚‹ä¸­ã§ã®å•é¡Œç‚¹ã¯ã€åœ°å…ƒæ°‘ãŒã©ã†ä»–è¨€èªžã«å¯¾å¿œã™ã‚‹ã‹ã¨ã„ã†å•é¡Œã§ã‚ã‚‹ã€‚æ¯å›½èªžã§è©±ã‚’ã—ã¦ãã‚‹å¤–å›½äººè¦³å…‰å®¢ãŒã€ä½•ã‚’ä¼ãˆãŸã„ã®ã‹ç†è§£ã™ã‚‹ã®ãŒé›£ã—ãã€åŒã˜è¨€èªžã§ä¼šè©±ã™ã‚‹ãƒ¬ãƒ™ãƒ«ã§ã®æ„æ€ç–Žé€šã‚’å›³ã‚‹ã“ã¨ã¯éžå¸¸ã«å›°é›£ã§ã‚ã‚‹ã€‚ã“ã“ã§æƒ…å ±ã‚»ãƒ³ã‚¿ãƒ¼å‡ºç‰ˆå±€ã§å‡ºç‰ˆã•ã‚Œã¦ã„ã‚‹ã€Œæ—…ã®æŒ‡ã•ã—ä¼šè©±å¸³ã€ï¼ˆä»¥ä¸‹ã€æŒ‡ã•ã—ä¼šè©±å¸³ï¼‰ã¨ã„ã†ã‚‚ã®ãŒã‚ã‚‹ã€‚æŒ‡å·®ã—ä¼šè©±å¸³ã¨ã¯ã€æ—…è¡Œä¸­ã§é »ç¹ã«ä½¿ã‚ã‚Œã‚‹ãƒ•ãƒ¬ãƒ¼ã‚ºãŒã€æ—¥æœ¬èªžã¨å¤–å›½èªžã«è¨³ã•ã‚Œã¦ãŠã‚Šã€æŒ‡ã‚’ã•ã™ã ã‘ã§ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ãŒã¨ã‚Œã‚‹ã¨ã„ã†ä¼šè©±é›†ã®ã“ã¨ã§ã‚ã‚‹ã€‚
+ã“ã®æœ¬ã¯ç¾åœ¨70ä»¥ä¸Šã®è¨€èªžã«å¯¾å¿œã§ãã‚‹ã‚ˆã†ã«ã‚·ãƒªãƒ¼ã‚ºåŒ–ã•ã‚Œã¦ã„ã‚‹ã€‚ã—ã‹ã—æ—¢å­˜ã®ã€ŒæŒ‡ã•ã—ä¼šè©±å¸³ã€ã«ã¯æ‰±ã„ã«ãã„ç‚¹ãŒ2 ã¤ã‚ã‚‹ã€‚
+1 ã¤ç›®ã¯ã€æŽ²è¼‰ã•ã‚Œã¦ã„ã‚‹ãƒ•ãƒ¬ãƒ¼ã‚ºå¤šã„ã¨ã„ã†ã“ã¨ã§ã‚ã‚‹ã€‚ãã®ãŸã‚ã«ã€è‡ªåˆ†ã®ä¼ãˆãŸã„ãƒ•ãƒ¬ãƒ¼ã‚ºãŒã©ã“ã«æŽ²è¼‰ã•ã‚Œã¦ã„ã‚‹ã®ã‹ã‚ã‹ã‚‰ãšã€æœ¬ã®æ‰±ã„ã«æ…£ã‚Œã‚‹ã¾ã§ã¯è¦‹ã¤ã‘ã«ãã„ã¨ã„ã†ç‚¹ã§ã‚ã‚‹ã€‚
+2 ã¤ç›®ã¯ã€æŽ²è¼‰ã•ã‚Œã¦ã„ã‚‹ãƒ•ãƒ¬ãƒ¼ã‚ºã—ã‹ä½¿ãˆãªã„ç‚¹ã§ã‚ã‚‹ã€‚ã¤ã¾ã‚Šæœ¬ã®ãªã‹ã«åˆ©ç”¨è€…ã®ã»ã—ã„ãƒ•ãƒ¬ãƒ¼ã‚ºãŒãªã„å ´åˆã€çš„ç¢ºãªã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ã¨ã‚‹ã“ã¨ãŒã™ã‚‹ã“ã¨ãŒã§ããªã®ã§ã‚ã‚‹ã€‚
+\bunseki{è—¤åŽŸç¥æ±°}
 
-\section{–Ú“I}
- –{ƒOƒ‹[ƒv‚Í~\ref{sec:mokuteki}~‚ÅŽæ‚èã‚°‚½Šù‘¶‚ÌuŽw‚³‚µ‰ï˜b’ v‚Ì‰Û‘è‚ðƒr[ƒRƒ“IoT‚Å‰ü‘P‚µƒXƒ}[ƒgƒtƒHƒ“Œü‚¯‚ÌƒAƒvƒŠuYoubeacommvŽw‚³‚µ‰ï˜b’ ‚ð‰ü—ÇE”­“W‚³‚¹‚½‚à‚Ì‚ðì¬‚·‚éB‚±‚ÌƒAƒvƒŠ‚ðŠO‘lŠÏŒõ‹q‚ª—˜—p‚·‚é‚±‚Æ‚ÅA”ŸŠÙ‚É–K‚ê‚éŠO‘lŠÏŒõ‹q‚Æ”ŸŠÙ–¯‚ÌƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“‚ÌŽè•‚¯‚ð‚·‚é‚±‚Æ‚ð–Ú“I‚Æ‚·‚éB
-\bunseki{“¡Œ´—S‘¿}
+\section{ç›®çš„}
+ æœ¬ã‚°ãƒ«ãƒ¼ãƒ—ã¯~\ref{sec:mokuteki}~ã§å–ã‚Šä¸Šã’ãŸæ—¢å­˜ã®ã€ŒæŒ‡ã•ã—ä¼šè©±å¸³ã€ã®èª²é¡Œã‚’ãƒ“ãƒ¼ã‚³ãƒ³IoTã§æ”¹å–„ã—ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³å‘ã‘ã®ã‚¢ãƒ—ãƒªã€ŒYoubeacommã€æŒ‡ã•ã—ä¼šè©±å¸³ã‚’æ”¹è‰¯ãƒ»ç™ºå±•ã•ã›ãŸã‚‚ã®ã‚’ä½œæˆã™ã‚‹ã€‚ã“ã®ã‚¢ãƒ—ãƒªã‚’å¤–å›½äººè¦³å…‰å®¢ãŒåˆ©ç”¨ã™ã‚‹ã“ã¨ã§ã€å‡½é¤¨ã«è¨ªã‚Œã‚‹å¤–å›½äººè¦³å…‰å®¢ã¨å‡½é¤¨æ°‘ã®ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®æ‰‹åŠ©ã‘ã‚’ã™ã‚‹ã“ã¨ã‚’ç›®çš„ã¨ã™ã‚‹ã€‚
+\bunseki{è—¤åŽŸç¥æ±°}
 
-\chapter{Youbeacomm‚É‚Â‚¢‚Ä}
-\section{Youbeacomm‚ÌŠT—v}
- Youbeacomm‚ÍŠO‘l—·sŽÒ‚Æ“ú–{l‚ð‚Â‚È‚®ƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“‘£iƒT[ƒrƒX‚Æ‚µ‚ÄA‚¨ŒÝ‚¢‚É‹¤’Ê‚ÌŒ¾Œê‚ª‚È‚¢lX‚É‘Î‚µA‚»‚ÌƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“‚ðƒ\ƒtƒgƒEƒFƒA‚É‚æ‚Á‚ÄŽx‰‡‚·‚éB
-“¯—l‚Ì‰Û‘è‚Ö‚Ì‰ðŒˆô‚Æ‚µ‚ÄAu—·‚ÌŽw‚³‚µ‰ï˜b’ v‚Æ‚¢‚¤A—lX‚ÈƒtƒŒ[ƒY‚â’PŒê‚ª2Œ¾Œê‚Å•¹‹L‚³‚ê‚Ä‚¢‚é‘Ð‚ªŽs”Ì‚³‚ê‚Ä‚¢‚éB
-ŠO‘l—·sŽÒ‚Í‚±‚Ì‘Ð‚Éˆóü‚³‚ê‚½ƒtƒŒ[ƒY‚â’PŒê‚ðŽw‚³‚·‚¾‚¯‚ÅA‹CŒy‚ÉŒ»’n‚Ìl‚ÆƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“‚ðs‚¤‚±‚Æ‚ª‚Å‚«‚éB
-—·s’†‚Ì—lX‚Èê–Ê‚ÅŽg‚í‚ê‚Ä‚¢‚é‚±‚Æ‚ð‘z’è‚µ‚Ä‚¢‚é‚½‚ßAƒRƒ“ƒeƒ“ƒc‚Í”ñí‚É[ŽÀ‚µ‚Ä‚¨‚èA“úí‚Å”­¶‚·‚é‚Å‚ ‚ë‚¤‘å”¼‚ÌƒP[ƒX‚É‘Î‰ž‚µ‚Ä‚¢‚éB
-‚µ‚©‚µ‚È‚ª‚çAŒfÚ‚³‚ê‚Ä‚¢‚éî•ñ—Ê‚ª‘½‚¢‚±‚Æ‚ÌƒfƒƒŠƒbƒg‚Æ‚µ‚ÄA—·sæ‚Å‚ÌŠeê–Ê‚²‚Æ‚É“KØ‚Èî•ñ‚ði‚èž‚Þ‚±‚Æ‚ª¢“ï‚Å‚ ‚é‚±‚Æ‚ª‚ ‚°‚ç‚ê‚éB
-‚Ü‚½AŽ†”}‘Ì‚Å‚ ‚éˆÈãA“¯ˆê‚ÌƒRƒ“ƒeƒ“ƒc‚ðd•¡‚µ‚ÄŒfÚ‚·‚é‚±‚Æ‚Í“ï‚µ‚­A—˜—pŽÒ‚Ì‘z‘œ‚Æ‘S‚­ˆÙ‚È‚éƒWƒƒƒ“ƒ‹‚Ìƒy[ƒW‚ÉŒfÚ‚³‚ê‚Ä‚¢‚é‚±‚Æ‚à‚ ‚éB
-—á‚Æ‚µ‚ÄAŽÊ^‚ðŽB‚Á‚Ä‚à‚ç‚¢‚½‚¢ê‡‚ÉŽg‚¤ƒtƒŒ[ƒY‚ªŠÏŒõ‚ÉŠÖ˜A‚·‚é‚·‚×‚Ä‚Ìƒy[ƒWŒfÚ‚³‚ê‚Ä‚¢‚ê‚ÎAƒy[ƒW‚ß‚­‚è‚Í”­¶‚µ‚È‚¢‚ªA
-ŽÀÛ‚É‚ÍŽ‚¿‰^‚Ñ‚â‚·‚¢”»Œ^‚É‚·‚é‚Æ‚¢‚¤Ž†–Ê‚Ì“s‡ãAu‚ ‚¢‚³‚Âv‚Æ‚¢‚¤ƒWƒƒƒ“ƒ‹‚É•ª—Þ‚³‚ê‚Ä‚¢‚éB
 
-–{’ñˆÄŽè–@‚Å‚Í—˜—pŽÒ‚ÌŒ»Ý’n‚âˆÚ“®Œo˜HAŽžŠÔ‘ÑA“VŒó‚È‚ÇAƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“‚ÅŽx‰‡‚ª•K—v‚Æ‚È‚éó‹µ‚ÉŽŠ‚Á‚½—v‘f‚ÆA
-‚ ‚ç‚©‚¶‚ßŽûW‚µ‚½êŠ‚Ì‘®«i¤‹ÆŽ{ÝA‰wAŽs–ðŠ‚È‚Çj‚â‚»‚ÌŽü•Ó‚Ìó‹µ‚È‚Ç‚ð‘‡‚µ‚ÄAuƒRƒ“ƒeƒLƒXƒgv‚ÆŒÄ‚ÑA‚»‚ê‚ç‚Ìî•ñ‚ð”’l‰»‚·‚éB
-‚»‚ê‚ç‚ðŠî‚É—˜—pŽÒ‚Ì’u‚©‚ê‚Ä‚¢‚éŠÂ‹«‚ð”cˆ¬‚µAƒtƒŒ[ƒY‚â’PŒê‚Ìi‚èž‚Ý‚â—Dæ“x•t‚¯‚ðs‚¤‚±‚Æ‚ÅA—˜—pŽÒ‚ª‚»‚ÌŽž“_‚Å³‚É‹‚ß‚Ä‚¢‚éŒó•â‚ð’ñˆÄ‚·‚é‚±‚Æ‚ð–ÚŽw‚·B
-—á‚Æ‚µ‚ÄA—˜—pŽÒ‚ª‹ó`‚Ì“‹æŒû‚Æ“ž’…ƒƒr[‚Ö‡‚ÉÚ‹ß (Ý’u‚µ‚½ƒr[ƒRƒ“‚ðŒŸ’m) ‚µ‚½‚Æ‚·‚éB
-‚»‚Ìê‡Au‹ó`‚É“ž’…‚µ‚½ŒãAƒ^[ƒ~ƒiƒ‹ŠO‚ÉˆÚ“®‚µ‚æ‚¤‚Æ‚µ‚Ä‚¢‚év‚à‚Ì‚Æ‚µ‚ÄA˜HüƒoƒX‚âƒ^ƒNƒV[‚È‚Ç‚ÌˆÚ“®Žè’i‚É‚Â‚¢‚Ä‚ÌƒtƒŒ[ƒY‚ª‹‚ß‚ç‚ê‚é‚Å‚ ‚ë‚¤‚Æ„’è‚Å‚«‚é‚½‚ßA
-Œð’Ê‚ÉŠÖŒW‚·‚éƒtƒŒ[ƒY‚ði‚èž‚ÝA‹ó`‚©‚ç‚ÌˆÚ“®Žè’i‚ð—Dæ“I‚É•\Ž¦‚·‚é‚±‚Æ‚È‚Ç‚ªl‚¦‚ç‚ê‚éB
+\chapter{Youbeacommã«ã¤ã„ã¦}
+
+\section{Youbeacommã®æ¦‚è¦}
+ Youbeacommã¯å¤–å›½äººæ—…è¡Œè€…ã¨æ—¥æœ¬äººã‚’ã¤ãªãã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ä¿ƒé€²ã‚µãƒ¼ãƒ“ã‚¹ã¨ã—ã¦ã€ãŠäº’ã„ã«å…±é€šã®è¨€èªžãŒãªã„äººã€…ã«å¯¾ã—ã€ãã®ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã«ã‚ˆã£ã¦æ”¯æ´ã™ã‚‹ã€‚
+åŒæ§˜ã®èª²é¡Œã¸ã®è§£æ±ºç­–ã¨ã—ã¦ã€ã€Œæ—…ã®æŒ‡ã•ã—ä¼šè©±å¸³ã€ã¨ã„ã†ã€æ§˜ã€…ãªãƒ•ãƒ¬ãƒ¼ã‚ºã‚„å˜èªžãŒ2è¨€èªžã§ä½µè¨˜ã•ã‚Œã¦ã„ã‚‹æ›¸ç±ãŒå¸‚è²©ã•ã‚Œã¦ã„ã‚‹ã€‚
+å¤–å›½äººæ—…è¡Œè€…ã¯ã“ã®æ›¸ç±ã«å°åˆ·ã•ã‚ŒãŸãƒ•ãƒ¬ãƒ¼ã‚ºã‚„å˜èªžã‚’æŒ‡ã•ã™ã ã‘ã§ã€æ°—è»½ã«ç¾åœ°ã®äººã¨ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’è¡Œã†ã“ã¨ãŒã§ãã‚‹ã€‚
+æ—…è¡Œä¸­ã®æ§˜ã€…ãªå ´é¢ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã“ã¨ã‚’æƒ³å®šã—ã¦ã„ã‚‹ãŸã‚ã€ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã¯éžå¸¸ã«å……å®Ÿã—ã¦ãŠã‚Šã€æ—¥å¸¸ã§ç™ºç”Ÿã™ã‚‹ã§ã‚ã‚ã†å¤§åŠã®ã‚±ãƒ¼ã‚¹ã«å¯¾å¿œã—ã¦ã„ã‚‹ã€‚
+ã—ã‹ã—ãªãŒã‚‰ã€æŽ²è¼‰ã•ã‚Œã¦ã„ã‚‹æƒ…å ±é‡ãŒå¤šã„ã“ã¨ã®ãƒ‡ãƒ¡ãƒªãƒƒãƒˆã¨ã—ã¦ã€æ—…è¡Œå…ˆã§ã®å„å ´é¢ã”ã¨ã«é©åˆ‡ãªæƒ…å ±ã‚’çµžã‚Šè¾¼ã‚€ã“ã¨ãŒå›°é›£ã§ã‚ã‚‹ã“ã¨ãŒã‚ã’ã‚‰ã‚Œã‚‹ã€‚
+ã¾ãŸã€ç´™åª’ä½“ã§ã‚ã‚‹ä»¥ä¸Šã€åŒä¸€ã®ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’é‡è¤‡ã—ã¦æŽ²è¼‰ã™ã‚‹ã“ã¨ã¯é›£ã—ãã€åˆ©ç”¨è€…ã®æƒ³åƒã¨å…¨ãç•°ãªã‚‹ã‚¸ãƒ£ãƒ³ãƒ«ã®ãƒšãƒ¼ã‚¸ã«æŽ²è¼‰ã•ã‚Œã¦ã„ã‚‹ã“ã¨ã‚‚ã‚ã‚‹ã€‚
+ä¾‹ã¨ã—ã¦ã€å†™çœŸã‚’æ’®ã£ã¦ã‚‚ã‚‰ã„ãŸã„å ´åˆã«ä½¿ã†ãƒ•ãƒ¬ãƒ¼ã‚ºãŒè¦³å…‰ã«é–¢é€£ã™ã‚‹ã™ã¹ã¦ã®ãƒšãƒ¼ã‚¸æŽ²è¼‰ã•ã‚Œã¦ã„ã‚Œã°ã€ãƒšãƒ¼ã‚¸ã‚ãã‚Šã¯ç™ºç”Ÿã—ãªã„ãŒã€
+å®Ÿéš›ã«ã¯æŒã¡é‹ã³ã‚„ã™ã„åˆ¤åž‹ã«ã™ã‚‹ã¨ã„ã†ç´™é¢ã®éƒ½åˆä¸Šã€ã€Œã‚ã„ã•ã¤ã€ã¨ã„ã†ã‚¸ãƒ£ãƒ³ãƒ«ã«åˆ†é¡žã•ã‚Œã¦ã„ã‚‹ã€‚
+
+æœ¬ææ¡ˆæ‰‹æ³•ã§ã¯åˆ©ç”¨è€…ã®ç¾åœ¨åœ°ã‚„ç§»å‹•çµŒè·¯ã€æ™‚é–“å¸¯ã€å¤©å€™ãªã©ã€ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§æ”¯æ´ãŒå¿…è¦ã¨ãªã‚‹çŠ¶æ³ã«è‡³ã£ãŸè¦ç´ ã¨ã€
+ã‚ã‚‰ã‹ã˜ã‚åŽé›†ã—ãŸå ´æ‰€ã®å±žæ€§ï¼ˆå•†æ¥­æ–½è¨­ã€é§…ã€å¸‚å½¹æ‰€ãªã©ï¼‰ã‚„ãã®å‘¨è¾ºã®çŠ¶æ³ãªã©ã‚’ç·åˆã—ã¦ã€ã€Œã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã€ã¨å‘¼ã³ã€ãã‚Œã‚‰ã®æƒ…å ±ã‚’æ•°å€¤åŒ–ã™ã‚‹ã€‚
+ãã‚Œã‚‰ã‚’åŸºã«åˆ©ç”¨è€…ã®ç½®ã‹ã‚Œã¦ã„ã‚‹ç’°å¢ƒã‚’æŠŠæ¡ã—ã€ãƒ•ãƒ¬ãƒ¼ã‚ºã‚„å˜èªžã®çµžã‚Šè¾¼ã¿ã‚„å„ªå…ˆåº¦ä»˜ã‘ã‚’è¡Œã†ã“ã¨ã§ã€åˆ©ç”¨è€…ãŒãã®æ™‚ç‚¹ã§æ­£ã«æ±‚ã‚ã¦ã„ã‚‹å€™è£œã‚’ææ¡ˆã™ã‚‹ã“ã¨ã‚’ç›®æŒ‡ã™ã€‚
+ä¾‹ã¨ã—ã¦ã€åˆ©ç”¨è€…ãŒç©ºæ¸¯ã®æ­ä¹—å£ã¨åˆ°ç€ãƒ­ãƒ“ãƒ¼ã¸é †ã«æŽ¥è¿‘ (è¨­ç½®ã—ãŸãƒ“ãƒ¼ã‚³ãƒ³ã‚’æ¤œçŸ¥) ã—ãŸã¨ã™ã‚‹ã€‚
+ãã®å ´åˆã€ã€Œç©ºæ¸¯ã«åˆ°ç€ã—ãŸå¾Œã€ã‚¿ãƒ¼ãƒŸãƒŠãƒ«å¤–ã«ç§»å‹•ã—ã‚ˆã†ã¨ã—ã¦ã„ã‚‹ã€ã‚‚ã®ã¨ã—ã¦ã€è·¯ç·šãƒã‚¹ã‚„ã‚¿ã‚¯ã‚·ãƒ¼ãªã©ã®ç§»å‹•æ‰‹æ®µã«ã¤ã„ã¦ã®ãƒ•ãƒ¬ãƒ¼ã‚ºãŒæ±‚ã‚ã‚‰ã‚Œã‚‹ã§ã‚ã‚ã†ã¨æŽ¨å®šã§ãã‚‹ãŸã‚ã€
+äº¤é€šã«é–¢ä¿‚ã™ã‚‹ãƒ•ãƒ¬ãƒ¼ã‚ºã‚’çµžã‚Šè¾¼ã¿ã€ç©ºæ¸¯ã‹ã‚‰ã®ç§»å‹•æ‰‹æ®µã‚’å„ªå…ˆçš„ã«è¡¨ç¤ºã™ã‚‹ã“ã¨ãªã©ãŒè€ƒãˆã‚‰ã‚Œã‚‹ã€‚
 \begin{center}
 \includegraphics[width=10cm]{abc.pdf}\\
-’ñˆÄ‚·‚éƒT[ƒrƒX
+ææ¡ˆã™ã‚‹ã‚µãƒ¼ãƒ“ã‚¹
 \end{center}
-\bunseki{‚‹´‘å•ã}
-\section{Youbeacomm‚Ì‹ï‘Ì“I‚ÈƒVƒXƒeƒ€‚Ìà–¾}
- –{ƒVƒXƒeƒ€‚Ö‚ÌƒAƒNƒZƒX‚ÍŠO‘l—·sŽÒŒü‚¯‚ÌƒXƒ}[ƒgƒtƒHƒ“‚ÌƒAƒvƒŠ‚Æ‚µ‚Ä’ñ‹Ÿ‚·‚éB•ÄNet ApplicationsŽÐ‚Ìƒ}[ƒPƒbƒgƒVƒFƒA’²¸[3]‚É‚æ‚é‚ÆA
-¢ŠE‚ÌŒg‘Ñ’[––‚Ì97.12“ˆÈã‚ÍAndroid (64.20“) ‚©iOS (32.92“) ‚ðŽÀs‚µ‚Ä‚¢‚é‚±‚Æ‚©‚çA‚±‚ê‚ç2‚Â‚ÌOS‚ðŠJ”­ƒ^[ƒQƒbƒg‚Æ‚·‚éB
-ƒAƒvƒŠ‚ÍGPSA(Ý’u‚·‚éƒr[ƒRƒ“‚ðŠÜ‚Þ) Bluetooth Low EnergyAWi-Fi‚È‚Ç‚Ìî•ñ‚ðƒoƒbƒNƒOƒ‰ƒEƒ“ƒh‚Å’èŠú“I‚ÉŽæ“¾‚µA
-—˜—pŽÒ‚Ì‹N“®‘€ì‚É‚æ‚Á‚ÄAƒtƒHƒAƒOƒ‰ƒEƒ“ƒh‚Æ‚È‚Á‚½Žž“_‚ÅA‚»‚ê‚ç‚Ìî•ñ‚ðƒT[ƒo‚É‘—M‚·‚éB
-ƒT[ƒo‚Í‚»‚ê‚ç‚ðŠî‚ÉˆÊ’uî•ñ‚â—˜—pŽÒŽü•Ó‚ÌŠÂ‹«‚ð„’è‚µAƒRƒ“ƒeƒLƒXƒg‚ð”FŽ¯‚·‚éBƒf[ƒ^ƒx[ƒX‚É“o˜^‚³‚ê‚Ä‚¢‚éƒtƒŒ[ƒY‚Ì‚¤‚¿A‚»‚ÌƒRƒ“ƒeƒLƒXƒg‚Éƒ}ƒbƒ`‚·‚é‚à‚Ì‚ð”²‚«o‚µA
-ƒRƒ“ƒeƒLƒXƒg‚ÆƒtƒŒ[ƒY‚ÌŠÖŒW‚©‚ç—Dæ“x‚ðŒvŽZ‚µ‚Ä•À‚Ñ‘Ö‚¦‚½ƒŠƒXƒg‚ðAƒAƒvƒŠ‚É‘Î‚µ‚Ä‰ž“š‚·‚é‚±‚Æ‚ÅA—˜—pŽÒ‚É‘Î‚µ‚ÄƒtƒŒ[ƒY‚Ì’ñˆÄ‚ªs‚í‚ê‚éB
-—˜—pŽÒ‚ª’ñˆÄ‚³‚ê‚½ƒtƒŒ[ƒY‚©‚ç“KØ‚È‚à‚Ì‚ð‘I‘ð‚·‚é‚ÆA‚»‚ÌƒtƒŒ[ƒY‚ª2‚©‘Œê‚Å•\Ž¦‚³‚êAƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“‚Ì‘ŠŽè (“ú–{Œê˜bŽÒ‚ð‘z’è) ‚É’ñŽ¦‚µ‚½‚Ì‚¿AƒXƒ}[ƒgƒtƒHƒ“‚ð‘ŠŽè‚É“n‚·B
-ƒT[ƒo‚Í‘I‘ð‚³‚ê‚½”­˜bƒtƒŒ[ƒY‚ðƒRƒ“ƒeƒLƒXƒg‚Ì1‚Â‚Æ‚µ‚Äl—¶‚µ‚½ã‚ÅA“¯—l‚Éƒf[ƒ^ƒx[ƒX‚©‚çƒtƒŒ[ƒY‚ð’ñˆÄ‚µA‚»‚Ì’†‚©‚ç“KØ‚È‰ñ“š‚ð‘I‘ð‚µ‚Ä‚à‚ç‚¤B
-’ñˆÄ‚Ì’†‚É“KØ‚ÈƒtƒŒ[ƒY‚ª‚È‚¢ê‡‚É‚ÍA‹@ŠB–|–ó‚âŠÏŒõˆÄ“àŠA“d˜b‚É‚æ‚é’Ê–óƒT[ƒrƒX‚È‚Ç‚ÌˆÄ“à‚ðs‚¤‚æ‚¤‚É‚·‚é‚±‚Æ‚ÅA
-—˜—pŽÒ‚É‘Î‚µ‚Äí‚É•¡”‚Ì‘I‘ðŽˆ‚ð’ñ‹Ÿ‚µ‚Â‚ÂAƒf[ƒ^‚Ì[ŽÀ‚ðŽå‚È–Ú“I‚Æ‚µ‚ÄA‚±‚ê‚ç‚ÌƒT[ƒrƒX‚Æ‚Ì—lX‚È˜AŒg‚às‚¤B
-‚Ü‚½A“KØ‚ÈƒtƒŒ[ƒY‚Ì’ñˆÄ‚ª‚È‚©‚Á‚½‚±‚ÆŽ©‘Ì‚É‚Â‚¢‚Ä‚ÍA’ñˆÄ‚³‚ê‚½ƒtƒŒ[ƒY‚É‘Î‚µ‚ÄA—˜—pŽÒ‚ªƒtƒB[ƒhƒoƒbƒN‚â’Ç‰Á‚Ì’ñˆÄ‚ðs‚¦‚é‚æ‚¤‚É‚·‚é‚±‚Æ‚ÅA
-ƒtƒŒ[ƒY‚Ì[ŽÀA•À‚Ñ‚É’ñˆÄ¸“x‚ÌŒüã‚ð}‚éB
-ƒr[ƒRƒ“‚È‚Ç‚Ìî•ñ‚©‚çˆÊ’uî•ñ“™‚ð„’è‚·‚éƒVƒXƒeƒ€‚É‚ÍAŠÈˆÕ“I‚Èƒr[ƒRƒ“‚Ì‰“ŠuŠÄŽ‹‚Ì–ðŠ„‚ðŽ‚½‚¹‚éB
-ƒr[ƒRƒ“‚ªŠe—˜—pŽÒ‚ÌƒXƒ}[ƒgƒtƒHƒ“‚ÉŒŸ’m‚³‚ê‚½Ž–ŽÀ‚âAƒr[ƒRƒ“‚©‚çˆê’è‚ÌŠ„‡‚Å’Ê’m‚³‚ê‚é“d’rŽc—Ê‚È‚Ç‚Ìî•ñ‚ðAƒAƒvƒŠ‚ð‰î‚µ‚ÄŽûW‚µA
-ŒŸ’m‚³‚ê‚½•p“x‚â“d’rŽc—Ê‚Ì„ˆÚ‚È‚Ç‚Ì“¾‚ç‚ê‚½î•ñ‚ð—p‚¢‚ÄAó‘ÔˆÙí‚È‚Ç‚ð‘Šú‚É”cˆ¬‚µAŒø—¦“I‚Èƒƒ“ƒeƒiƒ“ƒX‚ÌŒv‰æ‚ð—§ˆÄ‚·‚é‚½‚ß‚Ìî•ñŒ¹‚Æ‚·‚éB
+\bunseki{é«˜æ©‹å¤§è¼”}
+
+\section{Youbeacommã®å…·ä½“çš„ãªã‚·ã‚¹ãƒ†ãƒ ã®èª¬æ˜Ž}
+ æœ¬ã‚·ã‚¹ãƒ†ãƒ ã¸ã®ã‚¢ã‚¯ã‚»ã‚¹ã¯å¤–å›½äººæ—…è¡Œè€…å‘ã‘ã®ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ã®ã‚¢ãƒ—ãƒªã¨ã—ã¦æä¾›ã™ã‚‹ã€‚ç±³Net Applicationsç¤¾ã®ãƒžãƒ¼ã‚±ãƒƒãƒˆã‚·ã‚§ã‚¢èª¿æŸ»[3]ã«ã‚ˆã‚‹ã¨ã€
+ä¸–ç•Œã®æºå¸¯ç«¯æœ«ã®97.12ï¼…ä»¥ä¸Šã¯Android (64.20ï¼…) ã‹iOS (32.92ï¼…) ã‚’å®Ÿè¡Œã—ã¦ã„ã‚‹ã“ã¨ã‹ã‚‰ã€ã“ã‚Œã‚‰2ã¤ã®OSã‚’é–‹ç™ºã‚¿ãƒ¼ã‚²ãƒƒãƒˆã¨ã™ã‚‹ã€‚
+ã‚¢ãƒ—ãƒªã¯GPSã€(è¨­ç½®ã™ã‚‹ãƒ“ãƒ¼ã‚³ãƒ³ã‚’å«ã‚€) Bluetooth Low Energyã€Wi-Fiãªã©ã®æƒ…å ±ã‚’ãƒãƒƒã‚¯ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰ã§å®šæœŸçš„ã«å–å¾—ã—ã€
+åˆ©ç”¨è€…ã®èµ·å‹•æ“ä½œã«ã‚ˆã£ã¦ã€ãƒ•ã‚©ã‚¢ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰ã¨ãªã£ãŸæ™‚ç‚¹ã§ã€ãã‚Œã‚‰ã®æƒ…å ±ã‚’ã‚µãƒ¼ãƒã«é€ä¿¡ã™ã‚‹ã€‚
+ã‚µãƒ¼ãƒã¯ãã‚Œã‚‰ã‚’åŸºã«ä½ç½®æƒ…å ±ã‚„åˆ©ç”¨è€…å‘¨è¾ºã®ç’°å¢ƒã‚’æŽ¨å®šã—ã€ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã‚’èªè­˜ã™ã‚‹ã€‚ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«ç™»éŒ²ã•ã‚Œã¦ã„ã‚‹ãƒ•ãƒ¬ãƒ¼ã‚ºã®ã†ã¡ã€ãã®ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã«ãƒžãƒƒãƒã™ã‚‹ã‚‚ã®ã‚’æŠœãå‡ºã—ã€
+ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã¨ãƒ•ãƒ¬ãƒ¼ã‚ºã®é–¢ä¿‚ã‹ã‚‰å„ªå…ˆåº¦ã‚’è¨ˆç®—ã—ã¦ä¸¦ã³æ›¿ãˆãŸãƒªã‚¹ãƒˆã‚’ã€ã‚¢ãƒ—ãƒªã«å¯¾ã—ã¦å¿œç­”ã™ã‚‹ã“ã¨ã§ã€åˆ©ç”¨è€…ã«å¯¾ã—ã¦ãƒ•ãƒ¬ãƒ¼ã‚ºã®ææ¡ˆãŒè¡Œã‚ã‚Œã‚‹ã€‚
+åˆ©ç”¨è€…ãŒææ¡ˆã•ã‚ŒãŸãƒ•ãƒ¬ãƒ¼ã‚ºã‹ã‚‰é©åˆ‡ãªã‚‚ã®ã‚’é¸æŠžã™ã‚‹ã¨ã€ãã®ãƒ•ãƒ¬ãƒ¼ã‚ºãŒ2ã‹å›½èªžã§è¡¨ç¤ºã•ã‚Œã€ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®ç›¸æ‰‹ (æ—¥æœ¬èªžè©±è€…ã‚’æƒ³å®š) ã«æç¤ºã—ãŸã®ã¡ã€ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ã‚’ç›¸æ‰‹ã«æ¸¡ã™ã€‚
+ã‚µãƒ¼ãƒã¯é¸æŠžã•ã‚ŒãŸç™ºè©±ãƒ•ãƒ¬ãƒ¼ã‚ºã‚’ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã®1ã¤ã¨ã—ã¦è€ƒæ…®ã—ãŸä¸Šã§ã€åŒæ§˜ã«ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‹ã‚‰ãƒ•ãƒ¬ãƒ¼ã‚ºã‚’ææ¡ˆã—ã€ãã®ä¸­ã‹ã‚‰é©åˆ‡ãªå›žç­”ã‚’é¸æŠžã—ã¦ã‚‚ã‚‰ã†ã€‚
+ææ¡ˆã®ä¸­ã«é©åˆ‡ãªãƒ•ãƒ¬ãƒ¼ã‚ºãŒãªã„å ´åˆã«ã¯ã€æ©Ÿæ¢°ç¿»è¨³ã‚„è¦³å…‰æ¡ˆå†…æ‰€ã€é›»è©±ã«ã‚ˆã‚‹é€šè¨³ã‚µãƒ¼ãƒ“ã‚¹ãªã©ã®æ¡ˆå†…ã‚’è¡Œã†ã‚ˆã†ã«ã™ã‚‹ã“ã¨ã§ã€
+åˆ©ç”¨è€…ã«å¯¾ã—ã¦å¸¸ã«è¤‡æ•°ã®é¸æŠžè‚¢ã‚’æä¾›ã—ã¤ã¤ã€ãƒ‡ãƒ¼ã‚¿ã®å……å®Ÿã‚’ä¸»ãªç›®çš„ã¨ã—ã¦ã€ã“ã‚Œã‚‰ã®ã‚µãƒ¼ãƒ“ã‚¹ã¨ã®æ§˜ã€…ãªé€£æºã‚‚è¡Œã†ã€‚
+ã¾ãŸã€é©åˆ‡ãªãƒ•ãƒ¬ãƒ¼ã‚ºã®ææ¡ˆãŒãªã‹ã£ãŸã“ã¨è‡ªä½“ã«ã¤ã„ã¦ã¯ã€ææ¡ˆã•ã‚ŒãŸãƒ•ãƒ¬ãƒ¼ã‚ºã«å¯¾ã—ã¦ã€åˆ©ç”¨è€…ãŒãƒ•ã‚£ãƒ¼ãƒ‰ãƒãƒƒã‚¯ã‚„è¿½åŠ ã®ææ¡ˆã‚’è¡Œãˆã‚‹ã‚ˆã†ã«ã™ã‚‹ã“ã¨ã§ã€
+ãƒ•ãƒ¬ãƒ¼ã‚ºã®å……å®Ÿã€ä¸¦ã³ã«ææ¡ˆç²¾åº¦ã®å‘ä¸Šã‚’å›³ã‚‹ã€‚
+ãƒ“ãƒ¼ã‚³ãƒ³ãªã©ã®æƒ…å ±ã‹ã‚‰ä½ç½®æƒ…å ±ç­‰ã‚’æŽ¨å®šã™ã‚‹ã‚·ã‚¹ãƒ†ãƒ ã«ã¯ã€ç°¡æ˜“çš„ãªãƒ“ãƒ¼ã‚³ãƒ³ã®é éš”ç›£è¦–ã®å½¹å‰²ã‚’æŒãŸã›ã‚‹ã€‚
+ãƒ“ãƒ¼ã‚³ãƒ³ãŒå„åˆ©ç”¨è€…ã®ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ã«æ¤œçŸ¥ã•ã‚ŒãŸäº‹å®Ÿã‚„ã€ãƒ“ãƒ¼ã‚³ãƒ³ã‹ã‚‰ä¸€å®šã®å‰²åˆã§é€šçŸ¥ã•ã‚Œã‚‹é›»æ± æ®‹é‡ãªã©ã®æƒ…å ±ã‚’ã€ã‚¢ãƒ—ãƒªã‚’ä»‹ã—ã¦åŽé›†ã—ã€
+æ¤œçŸ¥ã•ã‚ŒãŸé »åº¦ã‚„é›»æ± æ®‹é‡ã®æŽ¨ç§»ãªã©ã®å¾—ã‚‰ã‚ŒãŸæƒ…å ±ã‚’ç”¨ã„ã¦ã€çŠ¶æ…‹ç•°å¸¸ãªã©ã‚’æ—©æœŸã«æŠŠæ¡ã—ã€åŠ¹çŽ‡çš„ãªãƒ¡ãƒ³ãƒ†ãƒŠãƒ³ã‚¹ã®è¨ˆç”»ã‚’ç«‹æ¡ˆã™ã‚‹ãŸã‚ã®æƒ…å ±æºã¨ã™ã‚‹ã€‚
 \begin{center}
 \includegraphics[width=10cm]{bcd.pdf}\\
-ƒVƒXƒeƒ€\¬}
+ã‚·ã‚¹ãƒ†ãƒ æ§‹æˆå›³
 \end{center}
-\bunseki{‚‹´‘å•ã}
+\bunseki{é«˜æ©‹å¤§è¼”}
 
-\section{Œ»Žž“_‚Å‚Ìƒvƒƒgƒ^ƒCƒv}\label{sec:sannosan}
- ’†ŠÔ•ñ‰ï‚Å‚Ìà–¾‚Ìƒc[ƒ‹‚ðŒ“‚ËAŽå—v‚È‹@”\‚Ì‰æ–Ê‘JˆÚ‚ðÄŒ»‚µ‚½14‰æ–Ê‚Å\¬‚³‚ê‚éÃ“I‚Èƒvƒƒgƒ^ƒCƒv‚Ì§ì‚ðs‚Á‚½B
-‚±‚Ìƒvƒƒgƒ^ƒCƒv‚Å‚ÍAƒAƒvƒŠ‚ÌƒCƒ“ƒXƒg[ƒ‹‚É—U“±‚·‚éƒvƒƒ‚[ƒVƒ‡ƒ“‚âŽÀÛ‚ÌƒCƒ“ƒXƒg[ƒ‹‚È‚ÇAƒAƒvƒŠ‚Ì‹N“®‚ÉŽŠ‚é‚Ü‚Å‚ÌƒvƒƒZƒX‚âAŠÏŒõˆÄ“àŠ‚È‚Ç‚Ö‚Ì—U“±‚ÌƒvƒƒZƒX‚È‚Ç‚ª
-–¢ÄŒ»‚Å‚Í‚ ‚é‚à‚Ì‚ÌAƒvƒƒgƒ^ƒCƒsƒ“ƒOƒc[ƒ‹‚ð—p‚¢‚Ä§ì‚·‚é‰ß’ö‚ÅAƒƒ“ƒo[ŠÔ‚Å‚ÌƒAƒvƒŠ‚Ì‹@”\‚É‘Î‚·‚é×•”‚Ì”FŽ¯‚ð‹¤—L‚·‚é‚±‚Æ‚ª‚Å‚«‚½B
-¡ŒãA‚±‚Ìƒvƒƒgƒ^ƒCƒv‚ðƒx[ƒX‚Æ‚µ‚ÄA“®“I‚ÉƒtƒŒ[ƒY‚ð’ñˆÄ‚·‚é‹@”\‚È‚Ç‚ð·‚èž‚ñ‚¾ƒvƒƒgƒ^ƒCƒv‚ð§ì‚µ‚½‚Ì‚¿A‚»‚Ì‘¼‚Ì‹@”\‚ð‡ŽŸŽÀ‘•‚µ‚Ä‚¢‚­B
-‚»‚Ì‰ß’ö‚ÅAŽÀÛ‚ÌŠO‘l—·sŽÒ‚ÉŽg—pE•]‰¿‚µ‚Ä‚à‚ç‚¢A—˜—pŽÒ‚Ö‚Ì—‰ð‚ð[‚ßAƒvƒƒgƒ^ƒCƒv‚ð§ì‚·‚é‚Æ‚¢‚¤ƒvƒƒZƒX‚ðŒJ‚è•Ô‚·‚±‚Æ‚ÅA
-—˜—pŽÒ‚É‚Æ‚Á‚ÄÅ“K‚ÈUX‚ð’ñ‹Ÿ‚Å‚«‚éƒVƒXƒeƒ€‚É‹ß‚Ã‚¯‚Ä‚¢‚­B
+\section{ç¾æ™‚ç‚¹ã§ã®ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—}\label{sec:sannosan}
+ ä¸­é–“å ±å‘Šä¼šã§ã®èª¬æ˜Žã®ãƒ„ãƒ¼ãƒ«ã‚’å…¼ã­ã€ä¸»è¦ãªæ©Ÿèƒ½ã®ç”»é¢é·ç§»ã‚’å†ç¾ã—ãŸ14ç”»é¢ã§æ§‹æˆã•ã‚Œã‚‹é™çš„ãªãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—ã®åˆ¶ä½œã‚’è¡Œã£ãŸã€‚
+ã“ã®ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—ã§ã¯ã€ã‚¢ãƒ—ãƒªã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã«èª˜å°Žã™ã‚‹ãƒ—ãƒ­ãƒ¢ãƒ¼ã‚·ãƒ§ãƒ³ã‚„å®Ÿéš›ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãªã©ã€ã‚¢ãƒ—ãƒªã®èµ·å‹•ã«è‡³ã‚‹ã¾ã§ã®ãƒ—ãƒ­ã‚»ã‚¹ã‚„ã€è¦³å…‰æ¡ˆå†…æ‰€ãªã©ã¸ã®èª˜å°Žã®ãƒ—ãƒ­ã‚»ã‚¹ãªã©ãŒ
+æœªå†ç¾ã§ã¯ã‚ã‚‹ã‚‚ã®ã®ã€ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ”ãƒ³ã‚°ãƒ„ãƒ¼ãƒ«ã‚’ç”¨ã„ã¦åˆ¶ä½œã™ã‚‹éŽç¨‹ã§ã€ãƒ¡ãƒ³ãƒãƒ¼é–“ã§ã®ã‚¢ãƒ—ãƒªã®æ©Ÿèƒ½ã«å¯¾ã™ã‚‹ç´°éƒ¨ã®èªè­˜ã‚’å…±æœ‰ã™ã‚‹ã“ã¨ãŒã§ããŸã€‚
+ä»Šå¾Œã€ã“ã®ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—ã‚’ãƒ™ãƒ¼ã‚¹ã¨ã—ã¦ã€å‹•çš„ã«ãƒ•ãƒ¬ãƒ¼ã‚ºã‚’ææ¡ˆã™ã‚‹æ©Ÿèƒ½ãªã©ã‚’ç››ã‚Šè¾¼ã‚“ã ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—ã‚’åˆ¶ä½œã—ãŸã®ã¡ã€ãã®ä»–ã®æ©Ÿèƒ½ã‚’é †æ¬¡å®Ÿè£…ã—ã¦ã„ãã€‚
+ãã®éŽç¨‹ã§ã€å®Ÿéš›ã®å¤–å›½äººæ—…è¡Œè€…ã«ä½¿ç”¨ãƒ»è©•ä¾¡ã—ã¦ã‚‚ã‚‰ã„ã€åˆ©ç”¨è€…ã¸ã®ç†è§£ã‚’æ·±ã‚ã€ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—ã‚’åˆ¶ä½œã™ã‚‹ã¨ã„ã†ãƒ—ãƒ­ã‚»ã‚¹ã‚’ç¹°ã‚Šè¿”ã™ã“ã¨ã§ã€
+åˆ©ç”¨è€…ã«ã¨ã£ã¦æœ€é©ãªUXã‚’æä¾›ã§ãã‚‹ã‚·ã‚¹ãƒ†ãƒ ã«è¿‘ã¥ã‘ã¦ã„ãã€‚
 \begin{center}
 \includegraphics[width=10cm]{cde.pdf}\\
-ƒvƒƒgƒ^ƒCƒv
+ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—
 \end{center}
-\bunseki{‚‹´‘å•ã}
+\bunseki{é«˜æ©‹å¤§è¼”}
 
-\chapter{’†ŠÔ•ñ‰ï}
 
-\section{”­•\Œ`Ž®}
- 7ŒŽ14“ú‚És‚í‚ê‚½’†ŠÔ”­•\‚Å‚ÍAŠeƒOƒ‹[ƒv‚Ìs‚Á‚Ä‚«‚½Šˆ“®‚ðÚ×‚É“`‚¦AŒãŠú‚ÌŠˆ“®‚ÉŠˆ‚©‚¹‚éƒŒƒrƒ…[‚ð“¾‚é‚±‚Æ‚ð–Ú“I‚Æ‚µ‚½B”­•\‚Æ‚µ‚Ä‚Í, ‘S‘Ì‚Ìƒ|ƒXƒ^[‚ð‚T•ª’ö“x‚Å”­•\‚µA‚»‚ÌŒã‚ÉŠeƒOƒ‹[ƒv‚²‚Æ‚É•À—ñ‚Å7•ª’ö“x‚Ì”­•\‚ðs‚Á‚½B‚»‚ÌŒã‚ÍŽžŠÔ‚Ì‹–‚·ŒÀ‚èŽ¿‹^‰ž“š‚ÌŽžŠÔ‚Æ‚µ‚½BŽ„‚½‚¿‚ÌƒOƒ‹[ƒv‚Å‚ÍA¡‰ñ§ì‚·‚éƒAƒvƒŠ‚Ìƒ‚ƒbƒNƒAƒbƒv‚ðƒXƒ}[ƒgƒtƒHƒ“ã‚É•\Ž¦‚µA‰ï˜b‚Ì—¬‚ê‚ð‚í‚©‚è‚â‚·‚­‚µ‚½B
-\bunseki{r“cŒ[‘¾˜Y}
+\chapter{ä¸­é–“å ±å‘Šä¼š}
 
-\section{ƒŒƒrƒ…[“à—e}
-\subsection{”­•\•û–@‚É‚Â‚¢‚Ä‚Ì•]‰¿‚Æ”½È}
- ’†ŠÔ”­•\‰ï‚Ås‚Á‚½ƒAƒ“ƒP[ƒg‚©‚ç”ñí‚É‘½‚©‚Á‚½ˆÓŒ©‚ªAŒ¾Œê‘Î‰ž‚ª‰pŒê‚¾‚¯‚Å‚Í”ŸŠÙ‚É—ˆ‚éŠO‘lŠÏŒõ‹q‚Å‚±‚ÌƒAƒvƒŠ‚ðŽg‚¦‚È‚¢l‚ªo‚Ä—ˆ‚éˆ×A‘½Œ¾Œê‘Î‰ž‚·‚×‚«‚Æ‚¢‚¤‚à‚Ì‚¾‚Á‚½B‚±‚ê‚ÍŽ„‚½‚¿‚Ì\‘z‚Å‚Í‘½Œ¾Œê‘Î‰ž‚³‚¹‚é‚Æ‚¢‚¤ˆÄ‚Íã‚ª‚Á‚Ä‚¢‚½‚ªAƒXƒNƒŠƒvƒg‚âƒ|ƒXƒ^[‚É‚Í”½‰f‚³‚ê‚Ä‚¢‚È‚©‚Á‚½ˆ×A‚±‚Ì‚æ‚¤‚ÈˆÓŒ©‚ª‘½”Šñ‚¹‚ç‚ê‚Ä‚µ‚Ü‚Á‚½B‚æ‚Á‚ÄAÅI¬‰Ê”­•\‚Å‚Í‘½Œ¾Œê‘Î‰ž‚³‚¹‚½‚±‚Æ‚É‚Â‚¢‚Ä–¾—Ä‚É˜b‚µAŒë‰ð‚ðµ‚­‚æ‚¤‚È”­•\‚ð‚µ‚È‚¢‚æ‚¤‚É’ˆÓ‚µ‚½‚¢B
-\bunseki{r“cŒ[‘¾˜Y}
+\section{ç™ºè¡¨å½¢å¼}
+ 7æœˆ14æ—¥ã«è¡Œã‚ã‚ŒãŸä¸­é–“ç™ºè¡¨ã§ã¯ã€å„ã‚°ãƒ«ãƒ¼ãƒ—ã®è¡Œã£ã¦ããŸæ´»å‹•ã‚’è©³ç´°ã«ä¼ãˆã€å¾ŒæœŸã®æ´»å‹•ã«æ´»ã‹ã›ã‚‹ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚’å¾—ã‚‹ã“ã¨ã‚’ç›®çš„ã¨ã—ãŸã€‚ç™ºè¡¨ã¨ã—ã¦ã¯, å…¨ä½“ã®ãƒã‚¹ã‚¿ãƒ¼ã‚’ï¼•åˆ†ç¨‹åº¦ã§ç™ºè¡¨ã—ã€ãã®å¾Œã«å„ã‚°ãƒ«ãƒ¼ãƒ—ã”ã¨ã«ä¸¦åˆ—ã§7åˆ†ç¨‹åº¦ã®ç™ºè¡¨ã‚’è¡Œã£ãŸã€‚ãã®å¾Œã¯æ™‚é–“ã®è¨±ã™é™ã‚Šè³ªç–‘å¿œç­”ã®æ™‚é–“ã¨ã—ãŸã€‚ç§ãŸã¡ã®ã‚°ãƒ«ãƒ¼ãƒ—ã§ã¯ã€ä»Šå›žåˆ¶ä½œã™ã‚‹ã‚¢ãƒ—ãƒªã®ãƒ¢ãƒƒã‚¯ã‚¢ãƒƒãƒ—ã‚’ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ä¸Šã«è¡¨ç¤ºã—ã€ä¼šè©±ã®æµã‚Œã‚’ã‚ã‹ã‚Šã‚„ã™ãã—ãŸã€‚
+\bunseki{è’ç”°å•“å¤ªéƒŽ}
 
-\subsection{”­•\“à—e‚É‚Â‚¢‚Ä‚Ì•]‰¿‚Æ”½È}
- ’†ŠÔ”­•\‰ï‚Ås‚Á‚½ƒAƒ“ƒP[ƒg‚©‚çÅ‚à‘½‚©‚Á‚½‚à‚Ì‚ªA–{ƒAƒvƒŠ‚ð‚Ç‚¤‚â‚Á‚ÄŠO‘lŠÏŒõ‹q‚É”F’m‚µ‚Ä‚à‚ç‚¤‚Ì‚©‚Æ‚¢‚¤‚à‚Ì‚Å‚ ‚Á‚½B¡‰ñ‚Ì”­•\‚ð‚·‚é‚É‚ ‚½‚Á‚Ä–{ƒAƒvƒŠ‚ÍŠO‘lŠÏŒõ‹q‚É“ü‚ê‚Ä‚¨‚¢‚Ä‚à‚ç‚¤‚Ì‚ª‘O’ñ‚Æ‚µ‚Ä‚¢‚½ˆ×A’m•û–@‚É‚Í—Í‚ð’‚°‚Ä‚¢‚È‚©‚Á‚½BŒ»ó‚Å‚ÍAŠO‘lŠÏŒõ‹q‚Ì‘½‚¢‚Å‚ ‚ë‚¤‹ó`‚Éƒr[ƒRƒ“‚ÅURL‚ð‘—M‚·‚é‚È‚Ç‚µ‚©ã‚ª‚Á‚Ä‚¨‚ç‚¸AŒãŠú‚Å‚Í”F’m“x‚ð‚ ‚°‚éŽè’i‚É‚Â‚¢‚Ä‚à[‚­ŒŸ“¢‚µ‚Ä‚¢‚«‚½‚¢B‰ï˜b•û–@‚É‚Â‚¢‚Ä‚à‘½‚­‚ÌˆÓŒ©‚ð‚¢‚½‚¾‚¢‚½B‚±‚ÌƒAƒvƒŠ‚ÍŒ©’m‚ç‚Êl‚ÉŽ©g‚ÌƒXƒ}ƒz‚ð“n‚·•K—v‚ª‚ ‚èA‚»‚Ì‚±‚Æ‚É‘Î‚µ‚Ä•s‰õŠ´‚ðŠo‚¦‚½‚èAŽèŠÔ‚¾‚Æl‚¦‚él‚ª”ñí‚É‘½‚¢‚±‚Æ‚ªƒAƒ“ƒP[ƒg‚Å‚í‚©‚Á‚½B‘¼‚É‚àAŠO‘lŠÏŒõ‹q‚É“Ë‘R‰æ–Ê‚ðŒ©‚¹‚ç‚ê‚½Žž‚Ì“ú–{l‚Ì”½‰ž‚âA‰ñ“š‚ða‚Á‚½ê‡‚Ì‹CŽ‚¿‚È‚ÇA–{ƒAƒvƒŠ‚Å‚Ì‰ï˜b•û–@‚É‚ÍŒ©’¼‚µ‚ª•K—v‚Å‚ ‚éB
-‚»‚µ‚ÄA–{ƒAƒvƒŠ‚Å‚Í‰ï˜b‚Ì¬—§‚Ì‚½‚ß‚ÉŽ–‘O‚ÉƒtƒŒ[ƒY‚ð—pˆÓ‚µ‚ÄAŠO‘lŠÏŒõ‹q‚ªŽ¿–â‚ð‚·‚éÛA‹‚ß‚Ä‚¢‚½ƒtƒŒ[ƒY‚ª‚È‚©‚Á‚½Žž‚É‹@ŠB–|–ó‚ð—p‚¢‚é‚½‚ßA‰‚ß‚©‚ç‹@ŠB–|–ó‚ð—p‚¢‚ê‚Î—Ç‚¢‚Ì‚Å‚Í‚È‚¢‚©‚Æ‚¢‚¤ˆÓŒ©‚ð‚¢‚½‚¾‚¢‚½B‚Ü‚½AŽw‚³‚µ‰ï˜b’ ‚Æ‚¢‚¤‚à‚Ì‚ðŽQl‚É‚µ‚Ä‚¢‚é‚½‚ßA‚»‚ê‚ç‚ÌŽèŠÔ‚ð’´‚¦‚È‚¢‚æ‚¤‚É‚·‚é•K—v‚ª‚ ‚é‚Æ‚¢‚¤ˆÓŒ©‚à‚¢‚½‚¾‚¢‚½B‚±‚ê‚ç‚É‚Â‚¢‚Ä‚ÍŽ„‚½‚¿‚àl‚¦‚Ä‚¢‚½‚±‚Æ‚Å‚ ‚éBŒ»óA‹@ŠB–|–ó‚Æ‚Ì·•Ê‰»‚Æ‚µ‚ÄA‹@ŠB–|–ó‚ÌŽèŠÔ‚ðÈ‚­‚½‚ß‚ÌƒtƒŒ[ƒY‚ð—pˆÓ‚µ‚Ä‚ ‚é‚Ì‚ÅA‚à‚µ‚à‹‚ß‚Ä‚¢‚½ƒtƒŒ[ƒY‚ª‚ ‚ê‚Î‹@ŠB–|–ó‚ð’Ê‚·‚Ü‚Å‚à‚È‚­“ú–{l‚Æ‰ï˜b‚ª‚Å‚«A“ú–{l—p‚É—pˆÓ‚³‚ê‚½‰ñ“š‚ª‚ ‚é‚½‚ß‰ï˜b‚ªƒXƒ€[ƒY‚Éi‚Þ“_‚ª‹“‚°‚ç‚ê‚éB‚µ‚©‚µƒtƒŒ[ƒY‚ª‚È‚¢ê‡‚Ì‘Îˆ•û–@‚ª•’Ê‚Ì–|–ó‚Æ•Ï‚í‚è‚È‚¢‚Ì‚Å‚»‚±‚ð‚Ç‚¤‚·‚é‚Ì‚©l‚¦‚Ä‚¢‚­•K—v‚ª‚ ‚éBŽw‚³‚µ‰ï˜b’ ‚É‚Â‚¢‚Ä‚ÍA‘Ð‚ÌŽw‚³‚µ‰ï˜b’ ‚É•K—v‚È’²‚×‚é‚Æ‚¢‚¤ŽèŠÔ‚ðÈ‚­‚Æ‚¢‚¤–Ú“I‚ª‚ ‚é‚Ì‚ÅAƒtƒŒ[ƒY‚Ì’ñˆÄ•û–@‚É‚Â‚¢‚Ä‚Í‹á–¡‚µ‚Ä‚¢‚«‚½‚¢B
-@‚±‚ê‚ç‚ÌˆÓŒ©‚ð‚Ü‚Æ‚ßAÅI¬‰Ê”­•\‚Ü‚Å‚É‰ðŒˆ‚µ‚Ä‚¢‚­‚à‚Ì‚ðˆÈ‰º‚É‹Lq‚µ‚½B
+\section{ãƒ¬ãƒ“ãƒ¥ãƒ¼å†…å®¹}
+
+\subsection{ç™ºè¡¨æ–¹æ³•ã«ã¤ã„ã¦ã®è©•ä¾¡ã¨åçœ}
+ ä¸­é–“ç™ºè¡¨ä¼šã§è¡Œã£ãŸã‚¢ãƒ³ã‚±ãƒ¼ãƒˆã‹ã‚‰éžå¸¸ã«å¤šã‹ã£ãŸæ„è¦‹ãŒã€è¨€èªžå¯¾å¿œãŒè‹±èªžã ã‘ã§ã¯å‡½é¤¨ã«æ¥ã‚‹å¤–å›½äººè¦³å…‰å®¢ã§ã“ã®ã‚¢ãƒ—ãƒªã‚’ä½¿ãˆãªã„äººãŒå‡ºã¦æ¥ã‚‹ç‚ºã€å¤šè¨€èªžå¯¾å¿œã™ã¹ãã¨ã„ã†ã‚‚ã®ã ã£ãŸã€‚ã“ã‚Œã¯ç§ãŸã¡ã®æ§‹æƒ³ã§ã¯å¤šè¨€èªžå¯¾å¿œã•ã›ã‚‹ã¨ã„ã†æ¡ˆã¯ä¸ŠãŒã£ã¦ã„ãŸãŒã€ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚„ãƒã‚¹ã‚¿ãƒ¼ã«ã¯åæ˜ ã•ã‚Œã¦ã„ãªã‹ã£ãŸç‚ºã€ã“ã®ã‚ˆã†ãªæ„è¦‹ãŒå¤šæ•°å¯„ã›ã‚‰ã‚Œã¦ã—ã¾ã£ãŸã€‚ã‚ˆã£ã¦ã€æœ€çµ‚æˆæžœç™ºè¡¨ã§ã¯å¤šè¨€èªžå¯¾å¿œã•ã›ãŸã“ã¨ã«ã¤ã„ã¦æ˜Žçž­ã«è©±ã—ã€èª¤è§£ã‚’æ‹›ãã‚ˆã†ãªç™ºè¡¨ã‚’ã—ãªã„ã‚ˆã†ã«æ³¨æ„ã—ãŸã„ã€‚
+\bunseki{è’ç”°å•“å¤ªéƒŽ}
+
+\subsection{ç™ºè¡¨å†…å®¹ã«ã¤ã„ã¦ã®è©•ä¾¡ã¨åçœ}
+ ä¸­é–“ç™ºè¡¨ä¼šã§è¡Œã£ãŸã‚¢ãƒ³ã‚±ãƒ¼ãƒˆã‹ã‚‰æœ€ã‚‚å¤šã‹ã£ãŸã‚‚ã®ãŒã€æœ¬ã‚¢ãƒ—ãƒªã‚’ã©ã†ã‚„ã£ã¦å¤–å›½äººè¦³å…‰å®¢ã«èªçŸ¥ã—ã¦ã‚‚ã‚‰ã†ã®ã‹ã¨ã„ã†ã‚‚ã®ã§ã‚ã£ãŸã€‚ä»Šå›žã®ç™ºè¡¨ã‚’ã™ã‚‹ã«ã‚ãŸã£ã¦æœ¬ã‚¢ãƒ—ãƒªã¯å¤–å›½äººè¦³å…‰å®¢ã«å…¥ã‚Œã¦ãŠã„ã¦ã‚‚ã‚‰ã†ã®ãŒå‰æã¨ã—ã¦ã„ãŸç‚ºã€å‘ŠçŸ¥æ–¹æ³•ã«ã¯åŠ›ã‚’æ³¨ã’ã¦ã„ãªã‹ã£ãŸã€‚ç¾çŠ¶ã§ã¯ã€å¤–å›½äººè¦³å…‰å®¢ã®å¤šã„ã§ã‚ã‚ã†ç©ºæ¸¯ã«ãƒ“ãƒ¼ã‚³ãƒ³ã§URLã‚’é€ä¿¡ã™ã‚‹ãªã©ã—ã‹ä¸ŠãŒã£ã¦ãŠã‚‰ãšã€å¾ŒæœŸã§ã¯èªçŸ¥åº¦ã‚’ã‚ã’ã‚‹æ‰‹æ®µã«ã¤ã„ã¦ã‚‚æ·±ãæ¤œè¨Žã—ã¦ã„ããŸã„ã€‚ä¼šè©±æ–¹æ³•ã«ã¤ã„ã¦ã‚‚å¤šãã®æ„è¦‹ã‚’ã„ãŸã ã„ãŸã€‚ã“ã®ã‚¢ãƒ—ãƒªã¯è¦‹çŸ¥ã‚‰ã¬äººã«è‡ªèº«ã®ã‚¹ãƒžãƒ›ã‚’æ¸¡ã™å¿…è¦ãŒã‚ã‚Šã€ãã®ã“ã¨ã«å¯¾ã—ã¦ä¸å¿«æ„Ÿã‚’è¦šãˆãŸã‚Šã€æ‰‹é–“ã ã¨è€ƒãˆã‚‹äººãŒéžå¸¸ã«å¤šã„ã“ã¨ãŒã‚¢ãƒ³ã‚±ãƒ¼ãƒˆã§ã‚ã‹ã£ãŸã€‚ä»–ã«ã‚‚ã€å¤–å›½äººè¦³å…‰å®¢ã«çªç„¶ç”»é¢ã‚’è¦‹ã›ã‚‰ã‚ŒãŸæ™‚ã®æ—¥æœ¬äººã®åå¿œã‚„ã€å›žç­”ã‚’æ¸‹ã£ãŸå ´åˆã®æ°—æŒã¡ãªã©ã€æœ¬ã‚¢ãƒ—ãƒªã§ã®ä¼šè©±æ–¹æ³•ã«ã¯è¦‹ç›´ã—ãŒå¿…è¦ã§ã‚ã‚‹ã€‚
+ãã—ã¦ã€æœ¬ã‚¢ãƒ—ãƒªã§ã¯ä¼šè©±ã®æˆç«‹ã®ãŸã‚ã«äº‹å‰ã«ãƒ•ãƒ¬ãƒ¼ã‚ºã‚’ç”¨æ„ã—ã¦ã€å¤–å›½äººè¦³å…‰å®¢ãŒè³ªå•ã‚’ã™ã‚‹éš›ã€æ±‚ã‚ã¦ã„ãŸãƒ•ãƒ¬ãƒ¼ã‚ºãŒãªã‹ã£ãŸæ™‚ã«æ©Ÿæ¢°ç¿»è¨³ã‚’ç”¨ã„ã‚‹ãŸã‚ã€åˆã‚ã‹ã‚‰æ©Ÿæ¢°ç¿»è¨³ã‚’ç”¨ã„ã‚Œã°è‰¯ã„ã®ã§ã¯ãªã„ã‹ã¨ã„ã†æ„è¦‹ã‚’ã„ãŸã ã„ãŸã€‚ã¾ãŸã€æŒ‡ã•ã—ä¼šè©±å¸³ã¨ã„ã†ã‚‚ã®ã‚’å‚è€ƒã«ã—ã¦ã„ã‚‹ãŸã‚ã€ãã‚Œã‚‰ã®æ‰‹é–“ã‚’è¶…ãˆãªã„ã‚ˆã†ã«ã™ã‚‹å¿…è¦ãŒã‚ã‚‹ã¨ã„ã†æ„è¦‹ã‚‚ã„ãŸã ã„ãŸã€‚ã“ã‚Œã‚‰ã«ã¤ã„ã¦ã¯ç§ãŸã¡ã‚‚è€ƒãˆã¦ã„ãŸã“ã¨ã§ã‚ã‚‹ã€‚ç¾çŠ¶ã€æ©Ÿæ¢°ç¿»è¨³ã¨ã®å·®åˆ¥åŒ–ã¨ã—ã¦ã€æ©Ÿæ¢°ç¿»è¨³ã®æ‰‹é–“ã‚’çœããŸã‚ã®ãƒ•ãƒ¬ãƒ¼ã‚ºã‚’ç”¨æ„ã—ã¦ã‚ã‚‹ã®ã§ã€ã‚‚ã—ã‚‚æ±‚ã‚ã¦ã„ãŸãƒ•ãƒ¬ãƒ¼ã‚ºãŒã‚ã‚Œã°æ©Ÿæ¢°ç¿»è¨³ã‚’é€šã™ã¾ã§ã‚‚ãªãæ—¥æœ¬äººã¨ä¼šè©±ãŒã§ãã€æ—¥æœ¬äººç”¨ã«ç”¨æ„ã•ã‚ŒãŸå›žç­”ãŒã‚ã‚‹ãŸã‚ä¼šè©±ãŒã‚¹ãƒ ãƒ¼ã‚ºã«é€²ã‚€ç‚¹ãŒæŒ™ã’ã‚‰ã‚Œã‚‹ã€‚ã—ã‹ã—ãƒ•ãƒ¬ãƒ¼ã‚ºãŒãªã„å ´åˆã®å¯¾å‡¦æ–¹æ³•ãŒæ™®é€šã®ç¿»è¨³ã¨å¤‰ã‚ã‚Šãªã„ã®ã§ãã“ã‚’ã©ã†ã™ã‚‹ã®ã‹è€ƒãˆã¦ã„ãå¿…è¦ãŒã‚ã‚‹ã€‚æŒ‡ã•ã—ä¼šè©±å¸³ã«ã¤ã„ã¦ã¯ã€æ›¸ç±ã®æŒ‡ã•ã—ä¼šè©±å¸³ã«å¿…è¦ãªèª¿ã¹ã‚‹ã¨ã„ã†æ‰‹é–“ã‚’çœãã¨ã„ã†ç›®çš„ãŒã‚ã‚‹ã®ã§ã€ãƒ•ãƒ¬ãƒ¼ã‚ºã®ææ¡ˆæ–¹æ³•ã«ã¤ã„ã¦ã¯åŸå‘³ã—ã¦ã„ããŸã„ã€‚
+ã€€ã“ã‚Œã‚‰ã®æ„è¦‹ã‚’ã¾ã¨ã‚ã€æœ€çµ‚æˆæžœç™ºè¡¨ã¾ã§ã«è§£æ±ºã—ã¦ã„ãã‚‚ã®ã‚’ä»¥ä¸‹ã«è¨˜è¿°ã—ãŸã€‚
 \begin{itemize}
- \item –{ƒAƒvƒŠ‚ð‚Ç‚Ì‚æ‚¤‚É‚µ‚ÄŠO‘lŠÏŒõ‹q‚É“ü‚ê‚Ä‚à‚ç‚¤‚©‚ÌŽè–@‚ÌlŽ@
- \item ‰ï˜b‚Ì‚«‚Á‚©‚¯‚ð¶‚Þ‚±‚Æ‚Í‚Å‚«‚é‚ª‰ï˜b‚ð¬—§‚³‚¹‚é‚½‚ß‚ÌH•v
- \item ‹@ŠB–|–ó‚âAŽw‚³‚µ‰ï˜b’ ‚Æ‚Ì·•Ê‰»‚Ì‚½‚ß‚ÌUIÝŒv‚âƒVƒXƒeƒ€\¬
+ \item æœ¬ã‚¢ãƒ—ãƒªã‚’ã©ã®ã‚ˆã†ã«ã—ã¦å¤–å›½äººè¦³å…‰å®¢ã«å…¥ã‚Œã¦ã‚‚ã‚‰ã†ã‹ã®æ‰‹æ³•ã®è€ƒå¯Ÿ
+ \item ä¼šè©±ã®ãã£ã‹ã‘ã‚’ç”Ÿã‚€ã“ã¨ã¯ã§ãã‚‹ãŒä¼šè©±ã‚’æˆç«‹ã•ã›ã‚‹ãŸã‚ã®å·¥å¤«
+ \item æ©Ÿæ¢°ç¿»è¨³ã‚„ã€æŒ‡ã•ã—ä¼šè©±å¸³ã¨ã®å·®åˆ¥åŒ–ã®ãŸã‚ã®UIè¨­è¨ˆã‚„ã‚·ã‚¹ãƒ†ãƒ æ§‹æˆ
 \end{itemize}
-\bunseki{r“cŒ[‘¾˜Y}
+\bunseki{è’ç”°å•“å¤ªéƒŽ}
 
 
+\chapter{ã‚°ãƒ«ãƒ¼ãƒ—Bã®ãƒ—ãƒ­ã‚»ã‚¹}
 
-\chapter{ƒOƒ‹[ƒvB‚ÌƒvƒƒZƒX}
+\section{å‰æœŸã®æ´»å‹•}
+  å‰æœŸã®æ´»å‹•ã§ã¯ã€ã¯ã˜ã‚ã«å‡½é¤¨å¸‚å†…ã§ç”ºã«é–¢ã™ã‚‹ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰èª¿æŸ»ã‚’è¡Œã„ã€å‡½é¤¨ã®å•é¡Œç‚¹ã‚’è¦‹ã¤ã‘ãŸã€‚ã‚¢ã‚¤ãƒ‡ã‚¢å‡ºã—ã‚’ã™ã‚‹äº‹å‰å­¦ç¿’ã¨ã—ã¦ã€å„è‡ªãƒ“ãƒ¼ã‚³ãƒ³ã«ã¤ã„ã¦èª¿ã¹ã€ä»–ã®äººã¨å†…å®¹ã‚’å…±æœ‰ã™ã‚‹ãƒ—ãƒ¬ã‚¼ãƒ³å¤§ä¼šã‚’è¡Œã£ãŸã€‚ãã®å¾Œã€ä»Šå›žãƒ“ãƒ¼ã‚³ãƒ³ã‚’æä¾›ã—ã¦ã„ãŸã ãTangerineæ ªå¼ä¼šç¤¾ã‹ã‚‰ã€ãƒ“ãƒ¼ã‚³ãƒ³ã®ãƒ¬ã‚¯ãƒãƒ£ãƒ¼ä¼šã‚’é–‹ã„ã¦ã‚‚ã‚‰ã„ã€ãƒ“ãƒ¼ã‚³ãƒ³ã®æ©Ÿèƒ½ã‚„éŽåŽ»ã«è¡Œã£ãŸãƒ“ãƒ¼ã‚³ãƒ³ã‚’ç”¨ã„ãŸäº‹æ¥­ä¾‹ã‚’å­¦ã‚“ã ã€‚ãƒ“ãƒ¼ã‚³ãƒ³ã®ç‰¹å¾´ã‚’å­¦ã‚“ã å¾Œã€ææ¡ˆã™ã‚‹ã‚µãƒ¼ãƒ“ã‚¹ã®ã‚¢ã‚¤ãƒ‡ã‚¢å‡ºã—ã‚’è¡Œã„ã€ãã“ã§æ±ºã¾ã£ãŸ3ã¤ã®ã‚¢ã‚¤ãƒ‡ã‚¢ã‹ã‚‰ãã‚Œãžã‚Œã®ç­ã«åˆ†ã‹ã‚Œã¦ã‚µãƒ¼ãƒ“ã‚¹ã®è©³ç´°ã‚’æ±ºã‚ã¦ã„ã£ãŸã€‚ã¾ãŸã€å‡½é¤¨å¸‚ã®ã‚‚ã®ã¥ãã‚Šä¼æ¥­ç´¹ä»‹ã®å ´ã«å‚åŠ ã—ã¦ã€ä¼æ¥­ã®æ–¹ãŸã¡ã«ç§ãŸã¡ã®æ´»å‹•ã‚’ç´¹ä»‹ã—ãŸã‚Šã€ä¼æ¥­ã®æ´»å‹•ã‚’çŸ¥ã‚‹ãªã©ã®äº¤æµä¼šã‚’è¡Œã£ãŸã€‚æœ€å¾Œã«ã€å‰æœŸã®æ´»å‹•ã®é›†å¤§æˆã¨ã—ã¦ä¸­é–“ç™ºè¡¨ä¼šã§ã“ã‚Œã¾ã§ã®æ´»å‹•å†…å®¹ã‚’ç™ºè¡¨ã—ãŸã€‚
+\bunseki{æ²³ç”°æ­©ç¾Ž}
 
-\section{‘OŠú‚ÌŠˆ“®}
-  ‘OŠú‚ÌŠˆ“®‚Å‚ÍA‚Í‚¶‚ß‚É”ŸŠÙŽs“à‚Å’¬‚ÉŠÖ‚·‚éƒtƒB[ƒ‹ƒh’²¸‚ðs‚¢A”ŸŠÙ‚Ì–â‘è“_‚ðŒ©‚Â‚¯‚½BƒAƒCƒfƒAo‚µ‚ð‚·‚éŽ–‘OŠwK‚Æ‚µ‚ÄAŠeŽ©ƒr[ƒRƒ“‚É‚Â‚¢‚Ä’²‚×A‘¼‚Ìl‚Æ“à—e‚ð‹¤—L‚·‚éƒvƒŒƒ[ƒ“‘å‰ï‚ðs‚Á‚½B‚»‚ÌŒãA¡‰ñƒr[ƒRƒ“‚ð’ñ‹Ÿ‚µ‚Ä‚¢‚½‚¾‚­TangerineŠ”Ž®‰ïŽÐ‚©‚çAƒr[ƒRƒ“‚ÌƒŒƒNƒ`ƒƒ[‰ï‚ðŠJ‚¢‚Ä‚à‚ç‚¢Aƒr[ƒRƒ“‚Ì‹@”\‚â‰ß‹Ž‚És‚Á‚½ƒr[ƒRƒ“‚ð—p‚¢‚½Ž–‹Æ—á‚ðŠw‚ñ‚¾Bƒr[ƒRƒ“‚Ì“Á’¥‚ðŠw‚ñ‚¾ŒãA’ñˆÄ‚·‚éƒT[ƒrƒX‚ÌƒAƒCƒfƒAo‚µ‚ðs‚¢A‚»‚±‚ÅŒˆ‚Ü‚Á‚½3‚Â‚ÌƒAƒCƒfƒA‚©‚ç‚»‚ê‚¼‚ê‚Ì”Ç‚É•ª‚©‚ê‚ÄƒT[ƒrƒX‚ÌÚ×‚ðŒˆ‚ß‚Ä‚¢‚Á‚½B‚Ü‚½A”ŸŠÙŽs‚Ì‚à‚Ì‚Ã‚­‚èŠé‹ÆÐ‰î‚Ìê‚ÉŽQ‰Á‚µ‚ÄAŠé‹Æ‚Ì•û‚½‚¿‚ÉŽ„‚½‚¿‚ÌŠˆ“®‚ðÐ‰î‚µ‚½‚èAŠé‹Æ‚ÌŠˆ“®‚ð’m‚é‚È‚Ç‚ÌŒð—¬‰ï‚ðs‚Á‚½BÅŒã‚ÉA‘OŠú‚ÌŠˆ“®‚ÌW‘å¬‚Æ‚µ‚Ä’†ŠÔ”­•\‰ï‚Å‚±‚ê‚Ü‚Å‚ÌŠˆ“®“à—e‚ð”­•\‚µ‚½B
-\bunseki{‰Í“c•à”ü}
+\section{ä»Šå¾Œã®äºˆå®š}
+ ã“ã“ã§ã¯å¾ŒæœŸã®äºˆå®šã«ã¤ã„ã¦ç´¹ä»‹ã™ã‚‹ã€‚ã¾ãšåˆã‚ã«åˆ¶ä½œã®æµã‚Œã¨ã—ã¦ã¯ã€ææ¡ˆã—ãŸæ¡ˆã®è¦‹ç›´ã—ã‚’ã—ã¦ã€ç°¡å˜ãªãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—ã‚’ä½œã‚Šã€ãã®ã‚ã¨ã«ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³é–‹ç™ºã‚’é€²ã‚ã¦ã„ãã€‚é–‹ç™ºã—çµ‚ã£ãŸã‚ã¨ã¯ã€ä½œã£ãŸã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å®Ÿéš›ã«ä½¿ç”¨ã—ã¦ã‚‚ã‚‰ã„ã€ãã®ãƒ•ã‚£ãƒ¼ãƒ‰ãƒãƒƒã‚¯ã‹ã‚‰æ”¹å–„ã‚’è¡Œã£ã¦ã„ãäºˆå®šã§ã‚ã‚‹ã€‚
+æ¬¡ã«ãƒ—ãƒ­ã‚»ã‚¹ã«æ²¿ã£ã¦è©³ã—ã„èª¬æ˜Žã‚’ã—ã¦ã„ãã€‚å¾ŒæœŸã®åˆã‚ã«ã€å‰æœŸã®ä¸­é–“ç™ºè¡¨ã§ææ¡ˆã—ãŸã‚¢ã‚¤ãƒ‡ã‚¢ã«ã€ç™ºè¡¨ã‚’èžã„ã¦ã„ãŸã ã„ãŸæ–¹ã€…ã®ãƒ•ã‚£ãƒ¼ãƒ‰ãƒãƒƒã‚¯ã‚’å–ã‚Šå…¥ã‚Œã€ææ¡ˆã®æ”¹å–„ã‚’è¡Œã£ã¦ã„ãã€‚æ¬¡ã«ã€æ”¹å–„ã—ãŸå†…å®¹ã‚’åŸºã«ã‚·ã‚¹ãƒ†ãƒ ã‚’ä½œã£ã¦ã„ãã€‚åˆ¶ä½œã«ã¤ã„ã¦ã¯ã€ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’åˆ¶ä½œã—ã¦ã„ãã€‚ç§ãŸã¡ãŒææ¡ˆã™ã‚‹ã‚µãƒ¼ãƒ“ã‚¹ã¯ã€~\ref{sec:sannosan}~ã«ã‹ã‹ã‚Œã¦ã‚ã‚‹é€šã‚Šã€å¤–å›½äººã‚’å¯¾è±¡ã¨ã—ãŸã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚ã‚‹ãŒã€å‡½é¤¨ã«è¦³å…‰ã—ã«æ¥ã‚‹å¤–å›½äººãŒã©ã®ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ã‚’ä½¿ã£ã¦ã„ã‚‹ã‹ãŒæƒ³å®šã§ããªã„ãŸã‚ã€Androidã¨iOSã®ä¸¡æ–¹ã«å¯¾å¿œã—ãŸã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ä½œã£ã¦ã„ãã“ã¨ã‚’äºˆå®šã—ã¦ã„ã‚‹ã€‚ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®åˆ¶ä½œã¯ã€é–‹ç™ºã‚’è¡Œã†å‰ã«ãƒ¡ãƒ³ãƒãƒ¼åŒå£«ã®è€ƒãˆã«ç›¸é•ç‚¹ãŒç”Ÿã˜ãªã„ã‚ˆã†ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—ã‚’ä½œã£ã¦ã€å†…å®¹ã‚’ç¢ºèªã—åˆã£ã¦ã‹ã‚‰é–‹ç™ºã‚’è¡ŒãŠã†ã¨æ€ã£ã¦ã„ã‚‹ã€‚ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’åˆ¶ä½œã—ãŸå¾Œã€å®Ÿéš›ã«å‡½é¤¨å¸‚å†…ã«ã„ã‚‹å¤–å›½äººè¦³å…‰å®¢ã¨å¸‚å†…ã«ä½ã‚€æ—¥æœ¬äººã«ä½¿ç”¨ã—ã¦ã‚‚ã‚‰ã„ã€ä½¿ã£ãŸæ„Ÿæƒ³ã‚„æ”¹å–„ã—ãŸæ–¹ãŒã„ã„ç‚¹ã‚’èžãã€å†ã³ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®æ”¹å–„ã‚’è¡Œã†ã€‚ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®æ”¹å–„ã¨å®Ÿéš›ã«ä½¿ç”¨ã—ã¦ã‚‚ã‚‰ã†ã“ã¨ã‚’ä½•åº¦ã‹ç¹°ã‚Šè¿”ã—è¡Œã†ã“ã¨ã«ã‚ˆã£ã¦ã€ç§ãŸã¡ã®ææ¡ˆã™ã‚‹ã‚µãƒ¼ãƒ“ã‚¹ã®å®Œæˆåº¦ã‚’ä¸Šã’ã¦ã„ããŸã„ã¨æ€ã†ã€‚
+\bunseki{æ²³ç”°æ­©ç¾Ž}
 
-\section{¡Œã‚Ì—\’è}
- ‚±‚±‚Å‚ÍŒãŠú‚Ì—\’è‚É‚Â‚¢‚ÄÐ‰î‚·‚éB‚Ü‚¸‰‚ß‚É§ì‚Ì—¬‚ê‚Æ‚µ‚Ä‚ÍA’ñˆÄ‚µ‚½ˆÄ‚ÌŒ©’¼‚µ‚ð‚µ‚ÄAŠÈ’P‚Èƒvƒƒgƒ^ƒCƒv‚ðì‚èA‚»‚Ì‚ ‚Æ‚ÉƒAƒvƒŠƒP[ƒVƒ‡ƒ“ŠJ”­‚ði‚ß‚Ä‚¢‚­BŠJ”­‚µI‚Á‚½‚ ‚Æ‚ÍAì‚Á‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ðŽÀÛ‚ÉŽg—p‚µ‚Ä‚à‚ç‚¢A‚»‚ÌƒtƒB[ƒhƒoƒbƒN‚©‚ç‰ü‘P‚ðs‚Á‚Ä‚¢‚­—\’è‚Å‚ ‚éB
-ŽŸ‚ÉƒvƒƒZƒX‚É‰ˆ‚Á‚ÄÚ‚µ‚¢à–¾‚ð‚µ‚Ä‚¢‚­BŒãŠú‚Ì‰‚ß‚ÉA‘OŠú‚Ì’†ŠÔ”­•\‚Å’ñˆÄ‚µ‚½ƒAƒCƒfƒA‚ÉA”­•\‚ð•·‚¢‚Ä‚¢‚½‚¾‚¢‚½•ûX‚ÌƒtƒB[ƒhƒoƒbƒN‚ðŽæ‚è“ü‚êA’ñˆÄ‚Ì‰ü‘P‚ðs‚Á‚Ä‚¢‚­BŽŸ‚ÉA‰ü‘P‚µ‚½“à—e‚ðŠî‚ÉƒVƒXƒeƒ€‚ðì‚Á‚Ä‚¢‚­B§ì‚É‚Â‚¢‚Ä‚ÍAƒXƒ}[ƒgƒtƒHƒ“ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ð§ì‚µ‚Ä‚¢‚­BŽ„‚½‚¿‚ª’ñˆÄ‚·‚éƒT[ƒrƒX‚ÍA~\ref{sec:sannosan}~‚É‚©‚©‚ê‚Ä‚ ‚é’Ê‚èAŠO‘l‚ð‘ÎÛ‚Æ‚µ‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Å‚ ‚é‚ªA”ŸŠÙ‚ÉŠÏŒõ‚µ‚É—ˆ‚éŠO‘l‚ª‚Ç‚ÌƒXƒ}[ƒgƒtƒHƒ“‚ðŽg‚Á‚Ä‚¢‚é‚©‚ª‘z’è‚Å‚«‚È‚¢‚½‚ßAAndroid‚ÆiOS‚Ì—¼•û‚É‘Î‰ž‚µ‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ðì‚Á‚Ä‚¢‚­‚±‚Æ‚ð—\’è‚µ‚Ä‚¢‚éBƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Ì§ì‚ÍAŠJ”­‚ðs‚¤‘O‚Éƒƒ“ƒo[“¯Žm‚Ìl‚¦‚É‘Šˆá“_‚ª¶‚¶‚È‚¢‚æ‚¤ƒvƒƒgƒ^ƒCƒv‚ðì‚Á‚ÄA“à—e‚ðŠm”F‚µ‡‚Á‚Ä‚©‚çŠJ”­‚ðs‚¨‚¤‚ÆŽv‚Á‚Ä‚¢‚éBƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ð§ì‚µ‚½ŒãAŽÀÛ‚É”ŸŠÙŽs“à‚É‚¢‚éŠO‘lŠÏŒõ‹q‚ÆŽs“à‚ÉZ‚Þ“ú–{l‚ÉŽg—p‚µ‚Ä‚à‚ç‚¢AŽg‚Á‚½Š´‘z‚â‰ü‘P‚µ‚½•û‚ª‚¢‚¢“_‚ð•·‚«AÄ‚ÑƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Ì‰ü‘P‚ðs‚¤BƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Ì‰ü‘P‚ÆŽÀÛ‚ÉŽg—p‚µ‚Ä‚à‚ç‚¤‚±‚Æ‚ð‰½“x‚©ŒJ‚è•Ô‚µs‚¤‚±‚Æ‚É‚æ‚Á‚ÄAŽ„‚½‚¿‚Ì’ñˆÄ‚·‚éƒT[ƒrƒX‚ÌŠ®¬“x‚ðã‚°‚Ä‚¢‚«‚½‚¢‚ÆŽv‚¤B
-\bunseki{‰Í“c•à”ü}
 
-\chapter{‘OŠú‚ÌU‚è•Ô‚è‚ÆŠw‚Ñ}
-\section{U‚è•Ô‚è}
-\subsection{ƒXƒPƒWƒ…[ƒ‹ŠÇ—}
- ƒXƒPƒWƒ…[ƒ‹ŠÇ—‚É‚Â‚¢‚Ä‚ÍAƒvƒƒWƒFƒNƒgŠJŽnŽž‚ÉŒˆ’è‚µ‚½”NŠÔƒXƒPƒWƒ…[ƒ‹‚ðŒ³‚ÉŠÇ—‚ðs‚Á‚½B
-‘OŠú‚Å‚ÌŠˆ“®‚Å‚ÍA”NŠÔƒXƒPƒWƒ…[ƒ‹‚ÆŠT‚Ëˆê’v‚µ‚½Šˆ“®‚â¬‰Ê‚ðo‚¹‚½ˆ×AŠÇ—‚ðs‚¦‚Ä‚¢‚½‚Æ‚¢‚¦‚éB
-‚µ‚©‚µA–â‘è“_‚Æ‚µ‚ÄƒXƒPƒWƒ…[ƒ‹ŠÇ—ŽÒ‚ª§ì‚µ‚½ƒXƒPƒWƒ…[ƒ‹‚ð‘‚¢’iŠK‚©‚ç‘S‘Ì‚ÉŒöŠJ‚µ‚Ä‚¢‚È‚©‚Á‚½Ž–‚ª‹“‚°‚ç‚ê‚éB
-‚±‚ê‚É‚æ‚Á‚ÄAƒƒ“ƒo[‚Ì‘½”‚ª¡Ž©•ª‚ª‰½‚ð‚â‚Á‚Ä‚¢‚é‚Ì‚©‚É‚Â‚¢‚Ä‚Ì—‰ð‚ÉŽžŠÔ‚ð—v‚µ‚Ä‚µ‚Ü‚Á‚½B
-ŒãŠú‚ÌƒvƒƒWƒFƒNƒg‚Å‚ÍA‚±‚ê‚ð‰ü‘P‚µAƒXƒPƒWƒ…[ƒ‹ŠÇ—ŽÒ‚Æƒƒ“ƒo[‚Æ‚ÌˆÓŽv‘a’Ê‚âAˆÓŒ©ŒðŠ·‰ï‚ðŽÀŽ{‚·‚é‚±‚Æ‚Å”FŽ¯‚Ìê’ê—‚ð–³‚­‚·‚±‚Æ‚ªd—v‚Å‚ ‚é‚Æ‚¢‚¦‚éB
-\bunseki{‹´ê•Û‘é}
-\subsection{î•ñ‹¤—L}
- Ž„‚½‚¿‚ÍA–{ƒvƒƒWƒFƒNƒg‚ªŽn‚Ü‚Á‚½“–‰A‹c‘è‚É‘Î‚µ‚ÄƒvƒƒWƒFƒNƒg‘S‘Ì‚Å”­•\‚â‹¤—LAˆÓŒ©‚ÌŒðŠ·‚ðs‚Á‚Ä‚¢‚½B
-‚µ‚©‚µA‘ål”‚Åì‹Æ‚ðs‚¤ÛAƒAƒEƒgƒvƒbƒg‚³‚ê‚éˆÓŒ©‚ª­‚È‚©‚Á‚½‚èAî•ñ“`’B‚ªs‚«“Í‚¢‚Ä‚¢‚È‚©‚Á‚½‚è‚Æ‚¢‚Á‚½–â‘è“_‚ª‚ ‚Á‚½B
-‚»‚±‚ÅAŽ„‚½‚¿‚Í3l‚©‚ç4l‚Ì¬ƒOƒ‹[ƒv‚ðì‚èA‚»‚±‚Å“¢˜_‚ðs‚È‚¤‚Æ‚¢‚Á‚½Žè–@‚ð—p‚¢‚½B
-l”‚ði‚é‚±‚Æ‚ÅŒÂl‚ªˆÓŒ©‚ðo‚µ‚â‚·‚¢ŠÂ‹«‚ðì‚èA‹c˜_‚ÌŒø—¦‰»‚ð}‚Á‚½‚±‚Æ‚É‚æ‚èA
-‚æ‚è‘½‚­‚ÌˆÓŒ©‚ðƒAƒEƒgƒvƒbƒg‚³‚¹‚é‚±‚Æ‚ªo—ˆ‚½B
-‚æ‚Á‚ÄAŽ„‚½‚¿‚ªŒãŠú‚ÌƒvƒƒWƒFƒNƒgŠwK‚ðs‚¤‚É“–‚½‚Á‚ÄA
-¬ƒOƒ‹[ƒv‚Å‚ÌƒfƒBƒXƒJƒbƒVƒ‡ƒ“‚ð‘½‚­Žæ‚è“ü‚ê‚é‚±‚Æ‚ª¡Œã‚àd—v‚É‚È‚Á‚Ä‚­‚é‚Æl‚¦‚ç‚ê‚éB
-\bunseki{‹´ê•Û‘é}
+\chapter{å‰æœŸã®æŒ¯ã‚Šè¿”ã‚Šã¨å­¦ã³}
 
-\section{Šw‚Ñ}
-\subsection{ƒVƒXƒeƒ€ÝŒv}
- Ž„‚½‚¿‚ÍA‘OŠú‚ÌƒvƒƒWƒFƒNƒg‚ð’Ê‚µ‚Ä‚æ‚èŽÀ‘H“I‚É‚Ç‚Ì‚æ‚¤‚É‚µ‚ÄƒVƒXƒeƒ€‚ðÝŒv‚·‚é‚Ì‚©‚ðŠw‚Ô‚±‚Æ‚ªo—ˆ‚½B
-ƒvƒƒWƒFƒNƒg“à‚ÅƒVƒXƒeƒ€ÝŒv‚É‚Â‚¢‚Ä‚Ìl‚¦•û‚âA—L—p«‚ÌƒŒƒNƒ`ƒƒ[‚ðs‚È‚¢A
-–{Šw‚Ìu‹`‚Å‚ ‚éƒ\ƒtƒgƒEƒFƒAÝŒv‚ÅŠw‚ñ‚¾‹Zp‚ð—p‚¢‚ÄŽÀÛ‚É’ñˆÄ‚µ‚½ƒT[ƒrƒX‚ÌÝŒv‚ðs‚Á‚½B
-ŽÀÛ‚ÉŽ©g‚Ål‚¦‚½ƒT[ƒrƒX‚ÉƒVƒXƒeƒ€‚ð“÷•t‚¯‚µ‚Ä‚¢‚­‚Æ‚¢‚Á‚½’iŠK‚ð“¥‚ñ‚¾Ž–‚É‚æ‚èA
-‘S‘Ì‚ð’Ê‚µ‚Ä‚æ‚èŽÀ‘H“I‚ÈƒVƒXƒeƒ€ŠJ”­‹Zp‚ðK“¾‚Å‚«‚½‚Æ‚¢‚¦‚éB
-\bunseki{‹´ê•Û‘é}
-\subsection{î•ñ‚ðƒAƒEƒgƒvƒbƒg‚·‚é‹Zp}
- Ž„‚½‚¿‚ÍA‘OŠú‚ÌƒvƒƒWƒFƒNƒg‚ð’Ê‚µ‚ÄÏ‹É“I‚Éî•ñ‚ÌƒAƒEƒgƒvƒbƒg‚ðs‚Á‚Ä‚«‚½B
-ƒuƒŒ[ƒ“ƒXƒg[ƒ~ƒ“ƒO‚âƒAƒCƒfƒAƒ\ƒ“‚ð’Ê‚µ‚ÄAƒƒ“ƒo[ŒÂl‚ª•Û—L‚µ‚Ä‚¢‚éî•ñ‚â”­‘z‚ðô‚¢o‚µ‚ðs‚Á‚½B
-‚Ü‚½AŠO•”Šé‹Æ‚ðµ‚¢‚Ä‚ÌƒAƒCƒfƒAƒRƒ“ƒeƒXƒg‚âA”ŸŠÙŽs‚Ì‚à‚Ì‚Ã‚­‚èŠé‹ÆÐ‰î‚Ìê‚ÖŽQ‰Á‚µA
-Ž©‚ç‚Ì’ñˆÄ‚ðÏ‹É“I‚ÉŠO•”‚ÖƒAƒEƒgƒvƒbƒg‚µ‚½B
-‚±‚ê‚ç‚ÌŒoŒ±‚É‚æ‚èAƒvƒŒƒ[ƒ“ƒe[ƒVƒ‡ƒ“‚ðs‚¤ƒXƒLƒ‹‚âA“à•”î•ñ‚ð’m‚ç‚È‚¢ŠO•”‚ÌŠÖŒWŽÒ‚ª‚Ç‚Ì‚æ‚¤‚Èî•ñ‚ð•K—v‚Æ‚µ‚Ä‚¢‚é‚Ì‚©‚ð’m‚é‚±‚Æ‚ª‚Å‚«A
-‚»‚Ìî•ñ‚ðƒƒ“ƒo[ŠÔ‚Å‹¤—L‚·‚é‚±‚Æ‚Å‘S‘Ì‚Æ‚µ‚ÄƒAƒEƒgƒvƒbƒg‹Zp‚ÌŒüã‚ð}‚é‚±‚Æ‚ªo—ˆ‚½B
-\bunseki{‹´ê•Û‘é}
+\section{æŒ¯ã‚Šè¿”ã‚Š}
 
-% ˆÈ~A•t˜^(•t‘®Ž‘—¿)‚Å‚ ‚é‚±‚Æ‚ðŽ¦‚·
+\subsection{ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«ç®¡ç†}
+ ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«ç®¡ç†ã«ã¤ã„ã¦ã¯ã€ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆé–‹å§‹æ™‚ã«æ±ºå®šã—ãŸå¹´é–“ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’å…ƒã«ç®¡ç†ã‚’è¡Œã£ãŸã€‚
+å‰æœŸã§ã®æ´»å‹•ã§ã¯ã€å¹´é–“ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«ã¨æ¦‚ã­ä¸€è‡´ã—ãŸæ´»å‹•ã‚„æˆæžœã‚’å‡ºã›ãŸç‚ºã€ç®¡ç†ã‚’è¡Œãˆã¦ã„ãŸã¨ã„ãˆã‚‹ã€‚
+ã—ã‹ã—ã€å•é¡Œç‚¹ã¨ã—ã¦ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«ç®¡ç†è€…ãŒåˆ¶ä½œã—ãŸã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’æ—©ã„æ®µéšŽã‹ã‚‰å…¨ä½“ã«å…¬é–‹ã—ã¦ã„ãªã‹ã£ãŸäº‹ãŒæŒ™ã’ã‚‰ã‚Œã‚‹ã€‚
+ã“ã‚Œã«ã‚ˆã£ã¦ã€ãƒ¡ãƒ³ãƒãƒ¼ã®å¤šæ•°ãŒä»Šè‡ªåˆ†ãŒä½•ã‚’ã‚„ã£ã¦ã„ã‚‹ã®ã‹ã«ã¤ã„ã¦ã®ç†è§£ã«æ™‚é–“ã‚’è¦ã—ã¦ã—ã¾ã£ãŸã€‚
+å¾ŒæœŸã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã§ã¯ã€ã“ã‚Œã‚’æ”¹å–„ã—ã€ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«ç®¡ç†è€…ã¨ãƒ¡ãƒ³ãƒãƒ¼ã¨ã®æ„æ€ç–Žé€šã‚„ã€æ„è¦‹äº¤æ›ä¼šã‚’å®Ÿæ–½ã™ã‚‹ã“ã¨ã§èªè­˜ã®é½Ÿé½¬ã‚’ç„¡ãã™ã“ã¨ãŒé‡è¦ã§ã‚ã‚‹ã¨ã„ãˆã‚‹ã€‚
+\bunseki{æ©‹å ´ä¿é·¹}
+
+\subsection{æƒ…å ±å…±æœ‰}
+ ç§ãŸã¡ã¯ã€æœ¬ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãŒå§‹ã¾ã£ãŸå½“åˆã€è­°é¡Œã«å¯¾ã—ã¦ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆå…¨ä½“ã§ç™ºè¡¨ã‚„å…±æœ‰ã€æ„è¦‹ã®äº¤æ›ã‚’è¡Œã£ã¦ã„ãŸã€‚
+ã—ã‹ã—ã€å¤§äººæ•°ã§ä½œæ¥­ã‚’è¡Œã†éš›ã€ã‚¢ã‚¦ãƒˆãƒ—ãƒƒãƒˆã•ã‚Œã‚‹æ„è¦‹ãŒå°‘ãªã‹ã£ãŸã‚Šã€æƒ…å ±ä¼é”ãŒè¡Œãå±Šã„ã¦ã„ãªã‹ã£ãŸã‚Šã¨ã„ã£ãŸå•é¡Œç‚¹ãŒã‚ã£ãŸã€‚
+ãã“ã§ã€ç§ãŸã¡ã¯3äººã‹ã‚‰4äººã®å°ã‚°ãƒ«ãƒ¼ãƒ—ã‚’ä½œã‚Šã€ãã“ã§è¨Žè«–ã‚’è¡Œãªã†ã¨ã„ã£ãŸæ‰‹æ³•ã‚’ç”¨ã„ãŸã€‚
+äººæ•°ã‚’çµžã‚‹ã“ã¨ã§å€‹äººãŒæ„è¦‹ã‚’å‡ºã—ã‚„ã™ã„ç’°å¢ƒã‚’ä½œã‚Šã€è­°è«–ã®åŠ¹çŽ‡åŒ–ã‚’å›³ã£ãŸã“ã¨ã«ã‚ˆã‚Šã€
+ã‚ˆã‚Šå¤šãã®æ„è¦‹ã‚’ã‚¢ã‚¦ãƒˆãƒ—ãƒƒãƒˆã•ã›ã‚‹ã“ã¨ãŒå‡ºæ¥ãŸã€‚
+ã‚ˆã£ã¦ã€ç§ãŸã¡ãŒå¾ŒæœŸã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆå­¦ç¿’ã‚’è¡Œã†ã«å½“ãŸã£ã¦ã€
+å°ã‚°ãƒ«ãƒ¼ãƒ—ã§ã®ãƒ‡ã‚£ã‚¹ã‚«ãƒƒã‚·ãƒ§ãƒ³ã‚’å¤šãå–ã‚Šå…¥ã‚Œã‚‹ã“ã¨ãŒä»Šå¾Œã‚‚é‡è¦ã«ãªã£ã¦ãã‚‹ã¨è€ƒãˆã‚‰ã‚Œã‚‹ã€‚
+\bunseki{æ©‹å ´ä¿é·¹}
+
+\section{å­¦ã³}
+
+\subsection{ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆ}
+ ç§ãŸã¡ã¯ã€å‰æœŸã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’é€šã—ã¦ã‚ˆã‚Šå®Ÿè·µçš„ã«ã©ã®ã‚ˆã†ã«ã—ã¦ã‚·ã‚¹ãƒ†ãƒ ã‚’è¨­è¨ˆã™ã‚‹ã®ã‹ã‚’å­¦ã¶ã“ã¨ãŒå‡ºæ¥ãŸã€‚
+ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆå†…ã§ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆã«ã¤ã„ã¦ã®è€ƒãˆæ–¹ã‚„ã€æœ‰ç”¨æ€§ã®ãƒ¬ã‚¯ãƒãƒ£ãƒ¼ã‚’è¡Œãªã„ã€
+æœ¬å­¦ã®è¬›ç¾©ã§ã‚ã‚‹ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è¨­è¨ˆã§å­¦ã‚“ã æŠ€è¡“ã‚’ç”¨ã„ã¦å®Ÿéš›ã«ææ¡ˆã—ãŸã‚µãƒ¼ãƒ“ã‚¹ã®è¨­è¨ˆã‚’è¡Œã£ãŸã€‚
+å®Ÿéš›ã«è‡ªèº«ã§è€ƒãˆãŸã‚µãƒ¼ãƒ“ã‚¹ã«ã‚·ã‚¹ãƒ†ãƒ ã‚’è‚‰ä»˜ã‘ã—ã¦ã„ãã¨ã„ã£ãŸæ®µéšŽã‚’è¸ã‚“ã äº‹ã«ã‚ˆã‚Šã€
+å…¨ä½“ã‚’é€šã—ã¦ã‚ˆã‚Šå®Ÿè·µçš„ãªã‚·ã‚¹ãƒ†ãƒ é–‹ç™ºæŠ€è¡“ã‚’ç¿’å¾—ã§ããŸã¨ã„ãˆã‚‹ã€‚
+\bunseki{æ©‹å ´ä¿é·¹}
+
+\subsection{æƒ…å ±ã‚’ã‚¢ã‚¦ãƒˆãƒ—ãƒƒãƒˆã™ã‚‹æŠ€è¡“}
+ ç§ãŸã¡ã¯ã€å‰æœŸã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’é€šã—ã¦ç©æ¥µçš„ã«æƒ…å ±ã®ã‚¢ã‚¦ãƒˆãƒ—ãƒƒãƒˆã‚’è¡Œã£ã¦ããŸã€‚
+ãƒ–ãƒ¬ãƒ¼ãƒ³ã‚¹ãƒˆãƒ¼ãƒŸãƒ³ã‚°ã‚„ã‚¢ã‚¤ãƒ‡ã‚¢ã‚½ãƒ³ã‚’é€šã—ã¦ã€ãƒ¡ãƒ³ãƒãƒ¼å€‹äººãŒä¿æœ‰ã—ã¦ã„ã‚‹æƒ…å ±ã‚„ç™ºæƒ³ã‚’æ´—ã„å‡ºã—ã‚’è¡Œã£ãŸã€‚
+ã¾ãŸã€å¤–éƒ¨ä¼æ¥­ã‚’æ‹›ã„ã¦ã®ã‚¢ã‚¤ãƒ‡ã‚¢ã‚³ãƒ³ãƒ†ã‚¹ãƒˆã‚„ã€å‡½é¤¨å¸‚ã®ã‚‚ã®ã¥ãã‚Šä¼æ¥­ç´¹ä»‹ã®å ´ã¸å‚åŠ ã—ã€
+è‡ªã‚‰ã®ææ¡ˆã‚’ç©æ¥µçš„ã«å¤–éƒ¨ã¸ã‚¢ã‚¦ãƒˆãƒ—ãƒƒãƒˆã—ãŸã€‚
+ã“ã‚Œã‚‰ã®çµŒé¨“ã«ã‚ˆã‚Šã€ãƒ—ãƒ¬ã‚¼ãƒ³ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã‚’è¡Œã†ã‚¹ã‚­ãƒ«ã‚„ã€å†…éƒ¨æƒ…å ±ã‚’çŸ¥ã‚‰ãªã„å¤–éƒ¨ã®é–¢ä¿‚è€…ãŒã©ã®ã‚ˆã†ãªæƒ…å ±ã‚’å¿…è¦ã¨ã—ã¦ã„ã‚‹ã®ã‹ã‚’çŸ¥ã‚‹ã“ã¨ãŒã§ãã€
+ãã®æƒ…å ±ã‚’ãƒ¡ãƒ³ãƒãƒ¼é–“ã§å…±æœ‰ã™ã‚‹ã“ã¨ã§å…¨ä½“ã¨ã—ã¦ã‚¢ã‚¦ãƒˆãƒ—ãƒƒãƒˆæŠ€è¡“ã®å‘ä¸Šã‚’å›³ã‚‹ã“ã¨ãŒå‡ºæ¥ãŸã€‚
+\bunseki{æ©‹å ´ä¿é·¹}
+
+% ä»¥é™ã€ä»˜éŒ²(ä»˜å±žè³‡æ–™)ã§ã‚ã‚‹ã“ã¨ã‚’ç¤ºã™
 \begin{appendix}
 
-\chapter{’†ŠÔ•ñ‰ï‚ÅŽg—p‚µ‚½ƒOƒ‹[ƒvB‚Ìƒ|ƒXƒ^[}
+\chapter{ä¸­é–“å ±å‘Šä¼šã§ä½¿ç”¨ã—ãŸã‚°ãƒ«ãƒ¼ãƒ—Bã®ãƒã‚¹ã‚¿ãƒ¼}
 \begin{center}
 \includegraphics[width=13cm]{gbt.pdf}
 \end{center}
 
-%•t˜^‚ÌI‚í‚è
+%ä»˜éŒ²ã®çµ‚ã‚ã‚Š
 \end{appendix}
 
 
 %\backmatter
 
-% ŽQl•¶Œ£
+% å‚è€ƒæ–‡çŒ®
 \begin{thebibliography}{9}
-\bibitem{a}‘–±È •½¬28”N”Å î•ñ’ÊM”’‘ ‘æ1•” “ÁW IoTEƒrƒbƒOƒf[ƒ^EAI`ƒlƒbƒgƒ[ƒN‚Æƒf[ƒ^‚ª‘n‘¢‚·‚éV‚½‚È‰¿’l`
+\bibitem{a}ç·å‹™çœ å¹³æˆ28å¹´ç‰ˆ æƒ…å ±é€šä¿¡ç™½æ›¸ ç¬¬1éƒ¨ ç‰¹é›† IoTãƒ»ãƒ“ãƒƒã‚°ãƒ‡ãƒ¼ã‚¿ãƒ»AI~ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ã¨ãƒ‡ãƒ¼ã‚¿ãŒå‰µé€ ã™ã‚‹æ–°ãŸãªä¾¡å€¤~
  (http://www.soumu.go.jp/johotsusintokei/whitepaper/ja/h28/html/nc122530.html)
 
-\bibitem{b}”ŸŠÙŽsŠÏŒõ•”ŠÏŒõŠé‰æ‰Û u—ˆ”ŸŠÏŒõ“üž‹q”„Œvv‚É‚æ‚éB
-ihttp://www.city.hakodate.hokkaido.jp/docs/2015062500021/files/H28irikomi.pdfj
+\bibitem{b}å‡½é¤¨å¸‚è¦³å…‰éƒ¨è¦³å…‰ä¼ç”»èª² ã€Œæ¥å‡½è¦³å…‰å…¥è¾¼å®¢æ•°æŽ¨è¨ˆã€ã«ã‚ˆã‚‹ã€‚
+ï¼ˆhttp://www.city.hakodate.hokkaido.jp/docs/2015062500021/files/H28irikomi.pdfï¼‰
 
-\bibitem{c}•ÄNet ApplicationsŽÐ‚Ì’²¸‚É‚æ‚éB
-(https://www.netmarketshare.com/operating-system-market-share.aspx?qprid=8\&qpcustomd=1, 2017”N7ŒŽ20“ú‰{——)
- %\bibitem {ƒ‰ƒxƒ‹} ’˜ŽÒ–¼. ‘Ð–¼. o”ÅŽÐ,  ”N†.
- %\bibitem {A2} ‚Ù‚°‚Ù‚°‚¨. ‚¤‚ñ‚½‚ç‚©‚ñ‚½‚ç,  2003.
+\bibitem{c}ç±³Net Applicationsç¤¾ã®èª¿æŸ»ã«ã‚ˆã‚‹ã€‚
+(https://www.netmarketshare.com/operating-system-market-share.aspx?qprid=8\&qpcustomd=1, 2017å¹´7æœˆ20æ—¥é–²è¦§)
+ %\bibitem {ãƒ©ãƒ™ãƒ«} è‘—è€…å. æ›¸ç±å. å‡ºç‰ˆç¤¾,  å¹´å·.
+ %\bibitem {A2} ã»ã’ã»ã’ãŠ. ã†ã‚“ãŸã‚‰ã‹ã‚“ãŸã‚‰,  2003.
 \end{thebibliography}
 
 \end{document}
