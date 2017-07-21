@@ -1,0 +1,3 @@
+[submodule "mid-report-common"]
+	path = mid-report-common
+	url = git@github.com:beaconFUN/mid-report-common.git
