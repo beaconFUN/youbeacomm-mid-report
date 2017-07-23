@@ -164,7 +164,7 @@ We called “Contextual Youbisashikaiwatyou” when aidea contest. But it was al
 交通に関係するフレーズに絞り込み、空港からの移動手段を優先的に表示する。
 \begin{figure}[htbp]
  \begin{center}
-  \makebox[\textwidth]{\includegraphics[width=0.75\paperwidth]{use_flow.png}}
+  \makebox[\textwidth]{\includegraphics[width=0.75\paperwidth]{img/use_flow.png}}
  \end{center}
  \caption{提案するサービス}
  \label{fig:use_flow}
@@ -174,6 +174,7 @@ We called “Contextual Youbisashikaiwatyou” when aidea contest. But it was al
 \section{Youbeacommの具体的なシステムの説明}
  本システムへのアクセスは外国人旅行者向けのスマートフォンのアプリとして提供する。米Net Applications社のマーケットシェア調査\cite{b}によると、
 世界の携帯端末の97.12％以上はAndroid (64.20％) かiOS (32.92％) を実行していることから、これら2つのOSを開発ターゲットとする。
+
 アプリはGPS、(設置するビーコンを含む) BLE、Wi-Fiなどの情報をバックグラウンドで定期的に取得し、
 利用者の起動操作によって、フォアグラウンドとなった時点で、それらの情報をサーバに送信する。
 サーバはそれらを基に位置情報や利用者周辺の環境を推定し、コンテキストを認識する。データベースに登録されているフレーズのうち、そのコンテキストにマッチするものを抜き出し、
@@ -184,14 +185,16 @@ We called “Contextual Youbisashikaiwatyou” when aidea contest. But it was al
 
 提案の中に適切なフレーズがない場合には、機械翻訳や観光案内所、電話による通訳サービスなどの案内を行うようにすることで、
 利用者に対して常に複数の選択肢を提供しつつ、データの充実を主な目的として、これらのサービスとの様々な連係も行う。
+
 また、適切なフレーズの提案がなかったこと自体については、提案されたフレーズに対して、利用者がフィードバックや追加の提案を行えるようにすることで、
 フレーズの充実、並びに提案精度の向上を図る。
+
 ビーコンなどの情報から位置情報等を推定するシステムには、簡易的なビーコンの遠隔監視の役割を持たせる。
 ビーコンが各利用者のスマートフォンに検知された事実や、ビーコンから一定の割合で通知される電池残量などの情報を、アプリを介して収集し、
 検知された頻度や電池残量の推移などの得られた情報を用いて、状態異常などを早期に把握し、効率的なメンテナンスの計画を立案するための情報源とする。
 \begin{figure}[htbp]
  \begin{center}
-  \makebox[\textwidth]{\includegraphics[width=0.75\paperwidth]{system_structure.png}}
+  \makebox[\textwidth]{\includegraphics[width=0.75\paperwidth]{img/system_structure.png}}
  \end{center}
  \caption{システム構成図}
  \label{fig:system_structure}
@@ -206,7 +209,7 @@ We called “Contextual Youbisashikaiwatyou” when aidea contest. But it was al
 その過程で、実際の外国人旅行者に使用・評価してもらい、利用者への理解を深め、プロトタイプを制作するというプロセスを繰り返すことで、
 利用者にとって最適なUXを提供できるシステムに近づけていく。
 \begin{center}
-\includegraphics[width=10cm]{cde.pdf}\\
+\includegraphics[width=10cm]{img/screen_sample.png}\\
 プロトタイプ
 \end{center}
 \bunseki{高橋大輔}
@@ -289,7 +292,7 @@ We called “Contextual Youbisashikaiwatyou” when aidea contest. But it was al
 
 \chapter{中間報告会で使用したグループBのポスター}
 \begin{center}
-\includegraphics[width=13cm]{gbt.pdf}
+\includegraphics[width=13cm]{img/gbt.pdf}
 \end{center}
 
 %付録の終わり
