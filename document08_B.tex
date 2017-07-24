@@ -13,6 +13,10 @@
 % ファイル分割のためのパッケージ
 \usepackage{subfiles}
 
+% 参考文献管理
+\usepackage[sorting=none]{biblatex}
+\addbibresource{ref.bib}
+
 % ここから -->
 \usepackage{calc,ifthen}
 \newcounter{hoge}
@@ -172,7 +176,7 @@ We called ``Contextual Youbisashikaiwatyou'' when aidea contest. But it was alre
 \bunseki{高橋大輔}
 
 \section{Youbeacommの具体的なシステムの説明}\label{sec:yonnoni}
- 本システムへのアクセスは外国人旅行者向けのスマートフォンのアプリとして提供する。米Net Applications社のマーケットシェア調査\cite{b}によると、
+ 本システムへのアクセスは外国人旅行者向けのスマートフォンのアプリとして提供する。米Net Applications社のマーケットシェア調査\cite{c}によると、
 世界の携帯端末の97.12％以上はAndroid (64.20％) かiOS (32.92％) を実行していることから、これら2つのOSを開発ターゲットとする。
 
 アプリはGPS、(設置するビーコンを含む) BLE、Wi-Fiなどの情報をバックグラウンドで定期的に取得し、
@@ -349,19 +353,6 @@ We called ``Contextual Youbisashikaiwatyou'' when aidea contest. But it was alre
 %\backmatter
 
 % 参考文献
-\begin{thebibliography}{9}
-\bibitem{JohoWhitepaper} 総務省 平成28年版 情報通信白書 第1部 特集 IoT・ビッグデータ・AI
-ネットワークとデータが創造する新たな価値.不明.
-\url{http://www.soumu.go.jp/johotsusintokei/whitepaper/ja/h28/html/nc122530.html} (2017/7/22アクセス).
-
-\bibitem {b} 函館市観光部観光企画課 (2017) 「来函観光入込客数推計」
-\url{http://www.city.hakodate.hokkaido.jp/docs/2015062500021/files/H28irikomi.pdf}
-（2017/7/22アクセス）
-
-\bibitem {c} 米Net Applications社の調査による
-(https://www.netmarketshare.com/operating-system-market-share.aspx?qprid=8\&qpcustomd=1, 2017年7月20日アクセス)
- %\bibitem {ラベル} 著者名. 書籍名. 出版社,  年号.
- %\bibitem {A2} ほげほげお. うんたらかんたら,  2003.
-\end{thebibliography}
+\printbibliography[title=参考文献]
 
 \end{document}
